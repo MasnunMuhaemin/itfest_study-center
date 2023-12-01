@@ -28,27 +28,44 @@
       <!-- start Navigasi Bar -->
 
         <nav
-            class="flex justify-between px-8 py-6 bg-gray-900 text-gray-200 fixed top-0 left-0 right-0 z-50">
+            class="flex relative justify-between px-8 py-8 bg-transparent text-black  top-0 left-0 right-0 z-50 transition-all duration-500">
             <div>
                 <h2>Study Center</h2>
             </div>
-            <div>
+            <div class="md:block hidden">
                 <button class="mr-5">Guru</button>
                 <button>Siswa</button>
+            </div>
+            <div class="md:hidden block" onclick="showMenu()">
+                <button><i class="fas fa-bars"></i></button>
             </div>
         </nav>
 
         <!-- End Navigasi Bar -->
 
+        <aside class="fixed hidden inset-0 bg-gray-600/80 z-50 items-center justify-center">
+            <button class="absolute top-0 right-0 m-5" onclick="closeMenu()">
+                <i class="fas fa-times text-xl text-white"></i>
+            </button>
+            <ul>
+                <li>
+                    <button class="text-white">Guru</button>
+                </li>
+                <li>
+                    <button class="text-white">Murid</button>
+                </li>
+            </ul>
+        </aside>
+
         <!-- start Carousel -->
-        <div id="indicators-carousel" class="relative w-full" data-carousel="static">
+        <div id="indicators-carousel" class="relative w-full -mt-[110px]" data-carousel="static">
             <!-- Carousel wrapper -->
-            <div class="relative h-56 overflow-hidden rounded-lg md:h-[600px]">
+            <div class="relative h-[400px] overflow-hidden rounded-lg md:h-[600px]">
                 <!-- Item 1 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
                     <img
                         src="./images/slider/1.jpg"
-                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                        class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                         alt="..."/>
                 </div>
                 <!-- Item 2 -->
@@ -57,7 +74,7 @@
                     data-carousel-item="data-carousel-item">
                     <img
                         src="./images/slider/2.jpg"
-                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                        class="absolute block w-full  h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                         alt="..."/>
                 </div>
                 <!-- Item 3 -->
@@ -66,7 +83,7 @@
                     data-carousel-item="data-carousel-item">
                     <img
                         src="./images/slider/1.jpg"
-                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                        class="absolute block w-full  h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                         alt="..."/>
                 </div>
                 <!-- Item 4 -->
@@ -75,7 +92,7 @@
                     data-carousel-item="data-carousel-item">
                     <img
                         src="./images/slider/2.jpg"
-                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                        class="absolute block w-full  h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                         alt="..."/>
                 </div>
                 <!-- Item 5 -->
@@ -84,7 +101,7 @@
                     data-carousel-item="data-carousel-item">
                     <img
                         src="./images/slider/1.jpg"
-                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                        class="absolute block w-full  h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                         alt="..."/>
                 </div>
             </div>
@@ -201,9 +218,9 @@
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 relative lg:grid-cols-2 gap-4 lg:gap-8 p-4 lg:p-0">
+            <div class="grid grid-cols-1 md:grid-cols-2 relative gap-4 lg:gap-8 p-4 lg:p-0">
                 <div class="p-4 lg:p-8 rounded-[25px] bg-[#eef8f5] shadow-xl">
-                    <img src="assets/pelatihan/merah_putih.png" alt=""/>
+                    <img src="images/pelatihan/merah_putih.png" alt=""/>
                     <h3 class="font-bold text-xl mt-3 mb-2">Terkini</h3>
                     <p class="text-gray-800">
                         Pelatihan dan sistem membantu guru menjawab tantangan Era Digital dan Merdeka
@@ -211,7 +228,7 @@
                     </p>
                 </div>
                 <div class="p-4 lg:p-8 rounded-[25px] bg-[#fff9eb] shadow-xl">
-                    <img src="assets/pelatihan/penggaris.png" alt=""/>
+                    <img src="images/pelatihan/penggaris.png" alt=""/>
                     <h3 class="font-bold text-xl mt-3 mb-2">Terkini</h3>
                     <p class="text-gray-800">
                         Pelatihan dan sistem membantu guru menjawab tantangan Era Digital dan Merdeka
@@ -219,7 +236,7 @@
                     </p>
                 </div>
                 <div class="p-4 lg:p-8 rounded-[25px] bg-[#fff9eb] shadow-xl">
-                    <img src="assets/pelatihan/file.png" alt=""/>
+                    <img src="images/pelatihan/file.png" alt=""/>
                     <h3 class="font-bold text-xl mt-3 mb-2">Terkini</h3>
                     <p class="text-gray-800">
                         Pelatihan dan sistem membantu guru menjawab tantangan Era Digital dan Merdeka
@@ -227,7 +244,7 @@
                     </p>
                 </div>
                 <div class="p-4 lg:p-8 rounded-[25px] bg-[#eef8f5] shadow-xl">
-                    <img src="assets/pelatihan/note.png" alt=""/>
+                    <img src="images/pelatihan/note.png" alt=""/>
                     <h3 class="font-bold text-xl mt-3 mb-2">Terkini</h3>
                     <p class="text-gray-800">
                         Pelatihan dan sistem membantu guru menjawab tantangan Era Digital dan Merdeka
@@ -242,24 +259,24 @@
         <!-- start support system -->
 
         <h2 class="my-7 mx-7 flex justify-center text-emerald-500">Support System</h2>
-        <h3 class="flex justify-center text-xl font-semibold text-gray-800">Mengajar daring dan luring menjadi mudah</h3>
+        <h3 class="flex justify-center md:text-left text-center text-xl font-semibold text-gray-800 md:px-0 px-5">Mengajar daring dan luring menjadi mudah</h3>
         <h3 class="flex justify-center text-xl font-semibold text-gray-800">
             praktis, dan hemat waktu</h3>
         <div
-            class="mt-8 ml-4 grid grid-cols-2 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 mr-4">
+            class="mt-8 ml-4 grid md:grid-cols-2 gap-4 mr-4 lg:px-28 md:px-10 px-5">
             <!-- Card 1 -->
             <div
-                class="relative group rounded overflow-hidden shadow-xl bg-white hover:shadow-2xl w-[560px] ml-44">
-                <div class="flex">
+                class="relative group rounded overflow-hidden shadow-xl bg-white hover:shadow-2xl">
+                <div class="lg:flex lg:text-left text-center">
                     <div class="w-96 ml-12">
                         <img src="./images/card/kalender.png" alt="card 1">
                     </div>
-                    <div class="relative z-10 mt-12 mr-8">
+                    <div class="relative z-10 lg:mt-12 mt-0 md:mr-8">
                         <!-- ... (Isi dari Card 1) ... -->
                         <h1 class="font-semibold">Modul Ajar</h1>
                         <p>Buat Modul Ajar dengan referensi Bank Modul Ajar.</p>
                         <button
-                        class="py-2 px-2 hover:bg-slate-200 border mt-3"><i class="fa-brands fa-youtube"></i> 
+                        class="py-2 px-2 hover:bg-slate-200 border mt-3 md:mb-0 mb-5"><i class="fa-brands fa-youtube"></i> 
                         Lihat Video
                         </button>
                     </div>
@@ -275,17 +292,17 @@
 
             <!-- Card 2 -->
             <div
-                class="relative group rounded overflow-hidden shadow-xl bg-white hover:shadow-2xl w-[560px]">
-                <div class="flex">
+                class="relative group rounded overflow-hidden shadow-xl bg-white hover:shadow-2xl">
+                <div class="lg:flex lg:text-left text-center">
                     <div class="w-96 ml-12">
                         <img src="./images/card/kalender.png" alt="card 1">
                     </div>
-                    <div class="relative z-10 mt-12 mr-8">
+                    <div class="relative z-10 lg:mt-12 mt-0 md:mr-8">
                         <!-- ... (Isi dari Card 1) ... -->
                         <h1 class="font-semibold">Modul Ajar</h1>
                         <p>Buat Modul Ajar dengan referensi Bank Modul Ajar.</p>
                         <button
-                        class="py-2 px-2 hover:bg-slate-200 border mt-3"><i class="fa-brands fa-youtube"></i> 
+                        class="py-2 px-2 hover:bg-slate-200 border mt-3 md:mb-0 mb-5"><i class="fa-brands fa-youtube"></i> 
                         Lihat Video
                         </button>
                     </div>
@@ -299,17 +316,17 @@
 
             <!-- Card 3 -->
             <div
-                class="relative group rounded overflow-hidden shadow-xl bg-white hover:shadow-2xl w-[560px] ml-44">
-                <div class="flex">
+                class="relative group rounded overflow-hidden shadow-xl bg-white hover:shadow-2xl">
+                <div class="lg:flex lg:text-left text-center">
                     <div class="w-96 ml-12">
                         <img src="./images/card/kalender.png" alt="card 1">
                     </div>
-                    <div class="relative z-10 mt-12 mr-8">
+                    <div class="relative z-10 lg:mt-12 mt-0 md:mr-8">
                         <!-- ... (Isi dari Card 1) ... -->
                         <h1 class="font-semibold">Modul Ajar</h1>
                         <p>Buat Modul Ajar dengan referensi Bank Modul Ajar.</p>
                         <button
-                        class="py-2 px-2 hover:bg-slate-200 border mt-3"><i class="fa-brands fa-youtube"></i> 
+                        class="py-2 px-2 hover:bg-slate-200 border mt-3 md:mb-0 mb-5"><i class="fa-brands fa-youtube"></i> 
                         Lihat Video
                         </button>
                     </div>
@@ -323,17 +340,17 @@
 
             <!-- Card 4 -->
             <div
-                class="relative group rounded overflow-hidden shadow-xl bg-white hover:shadow-2xl w-[560px]">
-                <div class="flex">
+                class="relative group rounded overflow-hidden shadow-xl bg-white hover:shadow-2xl">
+                <div class="lg:flex lg:text-left text-center">
                     <div class="w-96 ml-12">
                         <img src="./images/card/kalender.png" alt="card 1">
                     </div>
-                    <div class="relative z-10 mt-12 mr-8">
+                    <div class="relative z-10 lg:mt-12 mt-0 md:mr-8">
                         <!-- ... (Isi dari Card 1) ... -->
                         <h1 class="font-semibold">Modul Ajar</h1>
                         <p>Buat Modul Ajar dengan referensi Bank Modul Ajar.</p>
                         <button
-                        class="py-2 px-2 hover:bg-slate-200 border mt-3"><i class="fa-brands fa-youtube"></i> 
+                        class="py-2 px-2 hover:bg-slate-200 border mt-3 md:mb-0 mb-5"><i class="fa-brands fa-youtube"></i> 
                         Lihat Video
                         </button>
                     </div>
@@ -430,15 +447,15 @@
         <!-- start footer -->
 
         <footer class="bg-gray-900 text-white px-16 py-20">
-            <div class="grid-cols-6 grid gap-10">
-                <div class="col-span-2">
+            <div class="lg:grid-cols-6 grid-cols-2 grid gap-10">
+                <div class="col-span-2 lg:text-left text-center">
                     <h4 class="font-bold text-2xl mb-3">Student Center</h4>
 
                     <p class="text-gray-200">
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, cum!
                     </p>
                 </div>
-                <div>
+                <div class=" lg:text-left text-center">
                     <h5 class="font-bold text-xl mb-3">Guru</h5>
                     <ul>
                         <li>home</li>
@@ -447,7 +464,7 @@
                         <li>kontak</li>
                     </ul>
                 </div>
-                <div>
+                <div class=" lg:text-left text-center">
                     <h5 class="font-bold text-xl mb-3">Siswa</h5>
                     <ul>
                         <li>home</li>
@@ -456,7 +473,7 @@
                         <li>kontak</li>
                     </ul>
                 </div>
-                <div class="col-span-2">
+                <div class="col-span-2 lg:text-left text-center">
                     <h5 class="font-bold text-xl mb-3">Kontak</h5>
                     <input
                         type="text"
@@ -467,7 +484,7 @@
                         Subscribe
                     </button>
                 </div>
-                <div class="col-span-6">
+                <div class="lg:col-span-6 col-span-2">
                     <hr class="my-5 border-gray-600"/>
                     <p class="text-center text-gray-200">
                         &copy Copyright Barudak Alope Junior
@@ -480,5 +497,28 @@
 
         <script
             src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
+
+        <script>
+            window.addEventListener('scroll', function(){
+		    const nav= document.querySelector('nav')
+            nav.classList.toggle('!bg-gray-900', window.scrollY>500)
+            nav.classList.toggle('!text-gray-200', window.scrollY>500)
+            nav.classList.toggle('!fixed', window.scrollY>500)
+            nav.classList.toggle('md:!px-20', window.scrollY>500)
+            nav.classList.toggle('!px-7', window.scrollY>500)
+            nav.classList.toggle('!py-5', window.scrollY>500)
+		});
+
+        const showMenu= () => {
+		    const aside= document.querySelector('aside');
+            aside.classList.remove("hidden")
+            aside.classList.add("flex")
+        }
+        const closeMenu= () => {
+		    const aside= document.querySelector('aside');
+            aside.classList.add("hidden")
+            aside.classList.remove("flex")
+        }
+        </script>
     </body>
 </html>
