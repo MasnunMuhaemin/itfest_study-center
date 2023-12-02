@@ -28,13 +28,13 @@
       <!-- start Navigasi Bar -->
 
         <nav
-            class="flex relative justify-between px-8 py-8 bg-transparent text-black  top-0 left-0 right-0 z-50 transition-all duration-500">
+            class="flex relative items-center justify-between px-8 py-8 bg-transparent text-black  top-0 left-0 right-0 z-50 transition-all duration-500">
             <div>
-                <h2>Study Center</h2>
+                <h2 class="font-bold text-2xl">Study Center</h2>
             </div>
             <div class="md:block hidden">
-                <button class="mr-5">Guru</button>
-                <button>Siswa</button>
+                <a id="guruBtn" href="" class="rounded-xl px-5 py-2 hover:bg-white duration-500 hover:text-black font-medium mr-2 border-2 border-black">Guru</a>
+                <a id="siswaBtn" href="indexsiswa.html" class="rounded-xl px-5 py-2 hover:bg-white font-medium duration-500 border-2 border-black hover:text-black">Siswa</a>
             </div>
             <div class="md:hidden block" onclick="showMenu()">
                 <button><i class="fas fa-bars"></i></button>
@@ -52,7 +52,7 @@
                     <button class="text-white">Guru</button>
                 </li>
                 <li>
-                    <button class="text-white">Murid</button>
+                    <a href="indexsiswa.html" class="text-white">Murid</a>
                 </li>
             </ul>
         </aside>
@@ -268,17 +268,15 @@
             <div
                 class="relative group rounded overflow-hidden shadow-xl bg-white hover:shadow-2xl">
                 <div class="lg:flex lg:text-left text-center">
-                    <div class="w-96 ml-12">
+                    <div class="w-[200px] ml-12">
                         <img src="./images/card/kalender.png" alt="card 1">
                     </div>
-                    <div class="relative z-10 lg:mt-12 mt-0 md:mr-8">
+                    <div class="relative z-10 lg:mt-12 mt-0 md:mr-8 m-8 w-[250px]">
                         <!-- ... (Isi dari Card 1) ... -->
                         <h1 class="font-semibold">Modul Ajar</h1>
-                        <p>Buat Modul Ajar dengan referensi Bank Modul Ajar.</p>
-                        <button
-                        class="py-2 px-2 hover:bg-slate-200 border mt-3 md:mb-0 mb-5"><i class="fa-brands fa-youtube"></i> 
-                        Lihat Video
-                        </button>
+                        <p class="mb-3">Buat Modul Ajar dengan referensi Bank Modul Ajar.</p>
+                        <a href="https://youtu.be/xiCBGJcsB3Q?si=Ge8aT-U4IMkdwyKK" class="py-2 px-2 hover:bg-slate-200 border md:mb-0 mb-5"><i class="fa-brands fa-youtube"></i> 
+                            Lihat Video</a>
                     </div>
                 </div>
                 <!-- PNG di pojok kanan atas saat hover -->
@@ -294,17 +292,15 @@
             <div
                 class="relative group rounded overflow-hidden shadow-xl bg-white hover:shadow-2xl">
                 <div class="lg:flex lg:text-left text-center">
-                    <div class="w-96 ml-12">
-                        <img src="./images/card/kalender.png" alt="card 1">
+                    <div class="w-[200px] ml-12">
+                        <img src="./images/card/tugas.png" alt="card 1">
                     </div>
-                    <div class="relative z-10 lg:mt-12 mt-0 md:mr-8">
+                    <div class="relative z-10 lg:mt-12 mt-0 md:mr-8 m-8 w-[250px]">
                         <!-- ... (Isi dari Card 1) ... -->
-                        <h1 class="font-semibold">Modul Ajar</h1>
-                        <p>Buat Modul Ajar dengan referensi Bank Modul Ajar.</p>
-                        <button
-                        class="py-2 px-2 hover:bg-slate-200 border mt-3 md:mb-0 mb-5"><i class="fa-brands fa-youtube"></i> 
-                        Lihat Video
-                        </button>
+                        <h1 class="font-semibold">Kirim Tugas</h1>
+                        <p class="mb-3">Buat teks, lampiran file untuk kelompok atau kelas</p>
+                        <a href="https://www.youtube.com/live/VCS5IMl3q64?si=nzoVoAtaeyXDT1Po" class="py-2 px-2 hover:bg-slate-200 border md:mb-0 mb-5"><i class="fa-brands fa-youtube"></i> 
+                            Lihat Video</a>
                     </div>
                 </div>
                 <!-- PNG di pojok kanan atas saat hover -->
@@ -318,17 +314,15 @@
             <div
                 class="relative group rounded overflow-hidden shadow-xl bg-white hover:shadow-2xl">
                 <div class="lg:flex lg:text-left text-center">
-                    <div class="w-96 ml-12">
-                        <img src="./images/card/kalender.png" alt="card 1">
+                    <div class="w-[200px] ml-12">
+                        <img src="./images/card/materi.png" alt="card 1">
                     </div>
-                    <div class="relative z-10 lg:mt-12 mt-0 md:mr-8">
+                    <div class="relative z-10 lg:mt-12 mt-0 md:mr-8 m-8 w-[250px]">
                         <!-- ... (Isi dari Card 1) ... -->
-                        <h1 class="font-semibold">Modul Ajar</h1>
-                        <p>Buat Modul Ajar dengan referensi Bank Modul Ajar.</p>
-                        <button
-                        class="py-2 px-2 hover:bg-slate-200 border mt-3 md:mb-0 mb-5"><i class="fa-brands fa-youtube"></i> 
-                        Lihat Video
-                        </button>
+                        <h1 class="font-semibold">Materi Ajar</h1>
+                        <p class="mb-3">Unggah dan unduh video, audio, dokumen</p>
+                        <a href="https://www.youtube.com/live/VCS5IMl3q64?si=nzoVoAtaeyXDT1Po" class="py-2 px-2 hover:bg-slate-200 border md:mb-0 mb-5"><i class="fa-brands fa-youtube"></i> 
+                            Lihat Video</a>
                     </div>
                 </div>
                 <!-- PNG di pojok kanan atas saat hover -->
@@ -342,17 +336,15 @@
             <div
                 class="relative group rounded overflow-hidden shadow-xl bg-white hover:shadow-2xl">
                 <div class="lg:flex lg:text-left text-center">
-                    <div class="w-96 ml-12">
-                        <img src="./images/card/kalender.png" alt="card 1">
+                    <div class="w-[200px] ml-12">
+                        <img src="./images/card/banksoal.png" alt="card 1">
                     </div>
-                    <div class="relative z-10 lg:mt-12 mt-0 md:mr-8">
+                    <div class="relative z-10 lg:mt-12 mt-0 md:mr-8 m-8 w-[250px]">
                         <!-- ... (Isi dari Card 1) ... -->
-                        <h1 class="font-semibold">Modul Ajar</h1>
-                        <p>Buat Modul Ajar dengan referensi Bank Modul Ajar.</p>
-                        <button
-                        class="py-2 px-2 hover:bg-slate-200 border mt-3 md:mb-0 mb-5"><i class="fa-brands fa-youtube"></i> 
-                        Lihat Video
-                        </button>
+                        <h1 class="font-semibold">Bank Soal</h1>
+                        <p class="mb-3">Buat soal AKM, latihan soal ujian dengan referensi bank soal Study Center</p>
+                        <a href="https://youtu.be/xiCBGJcsB3Q?si=Ge8aT-U4IMkdwyKK" class="py-2 px-2 hover:bg-slate-200 border md:mb-0 mb-5"><i class="fa-brands fa-youtube"></i> 
+                            Lihat Video</a>
                     </div>
                 </div>
                 <!-- PNG di pojok kanan atas saat hover -->
@@ -480,7 +472,7 @@
                         placeholder="Masukan Email"
                         class="border py-2 px-5 rounded-full"/>
                     <button
-                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mt-3 lg:mt-3">
                         Subscribe
                     </button>
                 </div>
@@ -501,12 +493,18 @@
         <script>
             window.addEventListener('scroll', function(){
 		    const nav= document.querySelector('nav')
-            nav.classList.toggle('!bg-gray-900', window.scrollY>500)
-            nav.classList.toggle('!text-gray-200', window.scrollY>500)
+            const guruBtn = document.getElementById('guruBtn');
+            const siswaBtn = document.getElementById('siswaBtn');
+            nav.classList.toggle('!bg-teal-500', window.scrollY>500)
+            nav.classList.toggle('!text-white', window.scrollY>500)
             nav.classList.toggle('!fixed', window.scrollY>500)
             nav.classList.toggle('md:!px-20', window.scrollY>500)
             nav.classList.toggle('!px-7', window.scrollY>500)
             nav.classList.toggle('!py-5', window.scrollY>500)
+            guruBtn.classList.toggle('border-white', window.scrollY>500);
+            guruBtn.classList.toggle('hover:text-teal-500', window.scrollY>500);
+            siswaBtn.classList.toggle('border-white', window.scrollY>500);
+            siswaBtn.classList.toggle('hover:text-teal-500', window.scrollY>500);
 		});
 
         const showMenu= () => {
