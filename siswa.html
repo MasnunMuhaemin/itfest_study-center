@@ -30,19 +30,19 @@
       class="flex relative items-center justify-between px-8 py-8 bg-transparent text-black top-0 left-0 right-0 z-50 transition-all duration-500"
     >
       <div>
-        <h2 class="font-bold text-2xl">Study Center</h2>
+        <h2 class="font-bold text-2xl text-white">Study Center</h2>
       </div>
       <div class="md:block hidden">
         <a
           id="guruBtn"
           href="guru.html"
-          class="rounded-xl px-5 py-2 hover:bg-white duration-500 hover:text-black font-medium mr-2 border-2 border-black"
+          class="rounded-xl px-5 py-2 text-white duration-500 font-medium mr-2 border-2 border-white hover:bg-white hover:text-black"
           >Guru</a
         >
         <a
           id="siswaBtn"
           href="siswa.html"
-          class="rounded-xl px-5 py-2 hover:bg-white font-medium duration-500 border-2 border-black hover:text-black"
+          class="rounded-xl px-5 py-2 text-white font-medium duration-500 border-2 border-white hover:bg-white hover:text-black"
           >Siswa</a
         >
       </div>
@@ -85,11 +85,59 @@
           class="hidden duration-700 ease-in-out"
           data-carousel-item="active"
         >
-          <img
-            src="./images/slider/1.jpg"
-            class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-            alt="..."
-          />
+          <section
+            class="bg-center bg-no-repeat bg-[url('./images/slider/1.jpg')] bg-gray-700 bg-blend-multiply bg-cover"
+          >
+            <div
+              class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56"
+            >
+              <h1
+                class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl"
+              >
+                Mewujudkan Masa Depan Anda
+              </h1>
+              <p
+                class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48"
+              >
+                Jelajahi dunia pembelajaran di Study Center, di mana kami
+                memberikan prioritas pada teknologi, inovasi, dan investasi
+                untuk membuka nilai jangka panjang dan mendorong pertumbuhan
+                ekonomi.
+              </p>
+
+              <div
+                class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0"
+              >
+                <a
+                  href="#"
+                  class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
+                >
+                  Get started
+                  <svg
+                    class="w-3.5 h-3.5 ms-2 rtl:rotate-180"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 10"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M1 5h12m0 0L9 1m4 4L9 9"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  class="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 sm:ms-4 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400"
+                >
+                  Learn more
+                </a>
+              </div>
+            </div>
+          </section>
         </div>
         <!-- Item 2 -->
         <div
@@ -238,116 +286,128 @@
     <!-- end carousel -->
 
     <!-- start Belajar dengan Study Center -->
-    <div class="ml-36 m-20">
-      <h3 class="text-emerald-500">Belajar dengan Study Center</h3>
-      <h2 class="font-semibold text-xl">Keunggulan #1</h2>
-      <h2 class="font-semibold text-xl">Bank Sekolah</h2>
+    <div class="m-20">
+      <div class="ml-36 mb-12">
+        <h3 class="text-[#457b9d] mb-2">Belajar dengan Study Center</h3>
+        <h2 class="font-semibold uppercase text-3xl">
+          Mengapa Memilih Study Center?
+        </h2>
+      </div>
+      <div
+        class="mt-3 ml-4 grid md:grid-cols-2 gap-4 mr-4 lg:px-28 md:px-10 px-5"
+      >
+        <!-- Card 1 -->
+        <div
+          class="relative group overflow-hidden shadow-xl bg-[#9dc9de] rounded-[15px] mb-8 mr-4"
+        >
+          <div class="lg:text-left p-10 text-center">
+            <div class="w-[75px]">
+              <img src="./images/card/buku.png" alt="card 1" />
+            </div>
+            <div class="relative z-20 lg:mt-5 mt-0">
+              <!-- ... (Isi dari Card 1) ... -->
+              <h1 class="font-semibold text-[20px] text-gray-800">
+                Pembahasan lengkap
+              </h1>
+              <p class="text-gray-700">
+                Lebih gampang dimengerti karena ada penjelasan konsep,
+                langkah-langkah, pembuktian, dan kesimpulan.
+              </p>
+            </div>
+          </div>
+          <!-- PNG di pojok kanan -->
+          <!-- <img
+            src="./images/card/hoverCard.png"
+            alt="PNG"
+            class="absolute top-0 right-0"
+          /> -->
+        </div>
+
+        <!-- Replicate the above structure for other cards -->
+
+        <!-- Card 2 -->
+        <div
+          class="relative group overflow-hidden shadow-xl bg-[#a8dadc] rounded-[15px] mt-8 ml-4"
+        >
+          <div class="lg:text-left p-10 text-center">
+            <div class="w-[75px]">
+              <img src="./images/card/buku.png" alt="card 2" />
+            </div>
+            <div class="relative z-20 lg:mt-5 mt-0">
+              <!-- ... (Isi dari Card 1) ... -->
+              <h1 class="font-semibold text-[20px] text-gray-800">
+                Belajar dengan Para Ahli
+              </h1>
+              <p class="text-gray-700 font-normal">
+                Bisa memilih jumlah soal dan tingkat kesulitan yang ingin
+                dilatih, dengan urutan dan jenis soal yang diacak.
+              </p>
+            </div>
+          </div>
+          <!-- PNG di pojok kanan -->
+          <!-- <img
+            src="./images/card/hoverKuning.png"
+            alt="PNG"
+            class="absolute top-0 right-0"
+          /> -->
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="relative group overflow-hidden shadow-xl bg-[#a8dadc] rounded-[15px] mb-8 mr-4"
+        >
+          <div class="lg:text-left p-10 text-center">
+            <div class="w-[45px]">
+              <img src="./images/icon/3.png" alt="card 3" />
+            </div>
+            <div class="relative z-20 lg:mt-5 mt-0">
+              <!-- ... (Isi dari Card 1) ... -->
+              <h1 class="font-semibold text-[20px] text-gray-800">
+                Dilengkap dengan Video Pembelajaran
+              </h1>
+              <p class="text-gray-700 font-normal">
+                Ada diagram tabel, gambar, dan video untuk menjelaskan konsep
+                dan membuat belajar menjadi mudah dan menyenangkan!
+              </p>
+            </div>
+          </div>
+          <!-- PNG di pojok kanan -->
+          <!-- <img
+            src="./images/card/hoverKuning.png"
+            alt="PNG"
+            class="absolute top-0 right-0"
+          /> -->
+        </div>
+
+        <!-- Card 4 -->
+        <div
+          class="relative group overflow-hidden shadow-xl bg-[#9dc9de] rounded-[15px] mt-8 ml-4"
+        >
+          <div class="lg:text-left p-10 text-center">
+            <div class="w-[75px]">
+              <img src="./images/card/buku.png" alt="card 4" />
+            </div>
+            <div class="relative z-20 lg:mt-5 mt-0">
+              <!-- ... (Isi dari Card 1) ... -->
+              <h1 class="font-semibold text-[20px] text-gray-800">
+                Kurikulum Up-to-date
+              </h1>
+              <p class="text-gray-700 font-normal">
+                Soal selalu bertambah, termasuk AKM yang sesuai dengan kurikulum
+                dan tren terbaru.
+              </p>
+            </div>
+          </div>
+          <!-- PNG di pojok kanan -->
+          <!-- <img
+            src="./images/card/hoverCard.png"
+            alt="PNG"
+            class="absolute top-0 right-0"
+          /> -->
+        </div>
+      </div>
     </div>
-    <div
-      class="mt-3 ml-4 grid md:grid-cols-2 gap-4 mr-4 lg:px-28 md:px-10 px-5"
-    >
-      <!-- Card 1 -->
-      <div
-        class="relative group overflow-hidden shadow-xl bg-[#eef8f5] rounded-[15px] mb-8"
-      >
-        <div class="lg:text-left p-10 text-center">
-          <div class="w-[75px]">
-            <img src="./images/card/buku.png" alt="card 1" />
-          </div>
-          <div class="relative z-20 lg:mt-5 mt-0">
-            <!-- ... (Isi dari Card 1) ... -->
-            <h1 class="font-semibold">Pembahasan lengkap</h1>
-            <p>
-              Lebih gampang dimengerti karena ada penjelasan konsep,
-              langkah-langkah, pembuktian, dan kesimpulan.
-            </p>
-          </div>
-        </div>
-        <!-- PNG di pojok kanan -->
-        <img
-          src="./images/card/hoverCard.png"
-          alt="PNG"
-          class="absolute top-0 right-0"
-        />
-      </div>
 
-      <!-- Replicate the above structure for other cards -->
-
-      <!-- Card 2 -->
-      <div
-        class="relative group overflow-hidden shadow-xl bg-[#fff9eb] rounded-[15px] mt-8"
-      >
-        <div class="lg:text-left p-10 text-center">
-          <div class="w-[75px]">
-            <img src="./images/card/buku.png" alt="card 2" />
-          </div>
-          <div class="relative z-20 lg:mt-5 mt-0">
-            <!-- ... (Isi dari Card 1) ... -->
-            <h1 class="font-semibold">Sesuai kemampuan</h1>
-            <p>
-              Bisa memilih jumlah soal dan tingkat kesulitan yang ingin dilatih,
-              dengan urutan dan jenis soal yang diacak.
-            </p>
-          </div>
-        </div>
-        <!-- PNG di pojok kanan -->
-        <img
-          src="./images/card/hoverKuning.png"
-          alt="PNG"
-          class="absolute top-0 right-0"
-        />
-      </div>
-
-      <!-- Card 3 -->
-      <div
-        class="relative group overflow-hidden shadow-xl bg-[#fff9eb] rounded-[15px] mb-8"
-      >
-        <div class="lg:text-left p-10 text-center">
-          <div class="w-[75px]">
-            <img src="./images/card/buku.png" alt="card 3" />
-          </div>
-          <div class="relative z-20 lg:mt-5 mt-0">
-            <!-- ... (Isi dari Card 1) ... -->
-            <h1 class="font-semibold">Dilengkapi stimulus</h1>
-            <p>
-              Ada diagram tabel, gambar, dan video untuk menjelaskan konsep dan
-              bikin belajar jadi mudah dan asyik!
-            </p>
-          </div>
-        </div>
-        <!-- PNG di pojok kanan -->
-        <img
-          src="./images/card/hoverKuning.png"
-          alt="PNG"
-          class="absolute top-0 right-0"
-        />
-      </div>
-
-      <!-- Card 4 -->
-      <div
-        class="relative group overflow-hidden shadow-xl bg-[#eef8f5] rounded-[15px] mt-8"
-      >
-        <div class="lg:text-left p-10 text-center">
-          <div class="w-[75px]">
-            <img src="./images/card/buku.png" alt="card 4" />
-          </div>
-          <div class="relative z-20 lg:mt-5 mt-0">
-            <!-- ... (Isi dari Card 1) ... -->
-            <h1 class="font-semibold">Selalu diperbarui</h1>
-            <p>
-              Soal selalu bertambah, termasuk AKM yang sesuai kurikulum dan tren
-              terbaru.
-            </p>
-          </div>
-        </div>
-        <!-- PNG di pojok kanan -->
-        <img
-          src="./images/card/hoverCard.png"
-          alt="PNG"
-          class="absolute top-0 right-0"
-        />
-      </div>
-    </div>
     <!-- end Belajar dengan Study Center -->
 
     <!-- Start Mengapa Study Center -->
@@ -364,7 +424,7 @@
       <div class="col-span-6 flex justify-center flex-col">
         <div class="font-bold">
           <p class="text-3xl mb-[0.40rem]">
-            Mengapa <span class="text-teal-500">Study Center</span>
+            Mengapa <span class="text-[#457b9d]">Study Center</span>
           </p>
           <p class="text-lg font-semibold mb-2">
             Fasilitas lengkap & Pembahasan yang menyeluruh.
@@ -391,7 +451,7 @@
           </div>
 
           <div
-            class="bg-teal-100 rounded-tl-3xl rounded-br-3xl shadow-lg px-5 py-4 group hover:scale-110 duration-500"
+            class="bg-[#457b9d] rounded-tl-3xl rounded-br-3xl shadow-lg px-5 py-4 group hover:scale-110 duration-500"
           >
             <img
               src="images/subscription/key.png"
@@ -428,25 +488,25 @@
         class="flex flex-col items-center numbered-list-container px-5 h-90 mt-[5rem]"
       >
         <span
-          class="flex mb-4 w-[45px] h-[45px] text-white bg-blue-500 items-center justify-center rounded-full"
+          class="flex mb-4 w-[45px] h-[45px] text-white bg-blue-500 items-center justify-center rounded-full font-bold"
           ><h5>1</h5>
         </span>
-        <h4 class="text-xl mb-5">fleksibilitas waktu</h4>
+        <h4 class="text-xl mb-8">Fleksibilitas waktu</h4>
         <span
-          class="flex mb-4 w-[45px] h-[45px] text-white bg-blue-600 items-center justify-center rounded-full"
+          class="flex mb-4 w-[45px] h-[45px] text-white bg-blue-600 items-center justify-center rounded-full font-bold"
           ><h5>2</h5>
         </span>
-        <h4 class="text-xl mb-5">Mudah Di Pahami</h4>
+        <h4 class="text-xl mb-8">Mudah di pahami</h4>
         <span
-          class="flex mb-4 w-[45px] h-[45px] text-white bg-blue-700 items-center justify-center rounded-full"
+          class="flex mb-4 w-[45px] h-[45px] text-white bg-blue-700 items-center justify-center rounded-full font-bold"
           ><h5>3</h5>
         </span>
-        <h4 class="text-xl mb-5">Mudah Di Akses</h4>
+        <h4 class="text-xl mb-8">Mudah di akses</h4>
         <span
-          class="flex mb-4 w-[45px] h-[45px] text-white bg-blue-800 items-center justify-center rounded-full"
+          class="flex mb-4 w-[45px] h-[45px] text-white bg-blue-800 items-center justify-center rounded-full font-bold "
           ><h5>4</h5>
         </span>
-        <h4 class="text-xl mb-5x">Prestasi Kece</h4>
+        <h4 class="text-xl mb-8">Prestasi kece</h4>
       </div>
     </div>
 
@@ -513,7 +573,7 @@
         const nav = document.querySelector("nav");
         const guruBtn = document.getElementById("guruBtn");
         const siswaBtn = document.getElementById("siswaBtn");
-        nav.classList.toggle("!bg-teal-500", window.scrollY > 500);
+        nav.classList.toggle("!bg-[#457b9d]", window.scrollY > 500);
         nav.classList.toggle("!text-white", window.scrollY > 500);
         nav.classList.toggle("!fixed", window.scrollY > 500);
         nav.classList.toggle("md:!px-20", window.scrollY > 500);
