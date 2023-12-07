@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Study Center</title>
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -23,7 +24,8 @@
     <link rel="stylesheet" href="./icon/css/all.min.css" />
     <link rel="stylesheet" href="./icon/js/all.min.js" />
   </head>
-  <body>
+
+  <body style="font-family: 'Poppins', sans-serif" class="text-slate-600">
     <!-- start Navigasi Bar -->
 
     <nav
@@ -237,37 +239,117 @@
 
     <!-- end carousel -->
 
-    <!-- start Belajar dengan Study Center -->
-    <div class="ml-36 m-20">
-      <h3 class="text-emerald-500">Belajar dengan Study Center</h3>
-      <h2 class="font-semibold text-xl">Keunggulan #1</h2>
-      <h2 class="font-semibold text-xl">Bank Sekolah</h2>
-    </div>
+    <!-- start berfokus pada Guru -->
+
     <div
-      class="mt-3 ml-4 grid md:grid-cols-2 gap-4 mr-4 lg:px-28 md:px-10 px-5"
+      class="grid grid-cols-1 lg:grid-cols-2 px-4 lg:px-16 my-8 items-center py-8"
+    >
+      <div class="text-center lg:text-left">
+        <h1 class="font-bold text-3xl text-blue-600 mb-4 lg:mb-8">
+          Berfokus pada guru
+        </h1>
+        <p
+          class="color-[#212529] mb-4 lg:mb-8 font-bold text-xl box-border block leading-[1.2]"
+        >
+          Pelatihan dan support system didesain sesuai
+          <br />
+          dengan kebutuhan kerja guru
+        </p>
+        <p class="mb-4 w-[90%] lg:mb-8">
+          Semua layanan bertujuan untuk membantu guru merencanakan,
+          melaksanakan, dan mengevaluasi pembelajaran di kelas
+        </p>
+        <div class="bottom">
+          <button
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+          >
+            Daftar Sekarang
+          </button>
+        </div>
+      </div>
+
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 relative gap-4 lg:gap-8 p-4 lg:p-0"
+      >
+        <div class="p-4 lg:p-8 rounded-[25px] bg-[#eef8f5] shadow-xl">
+          <img src="images/pelatihan/merah_putih.png" alt="" />
+          <h3 class="font-bold text-xl mt-3 mb-2">Terkini</h3>
+          <p class="text-gray-800">
+            Pelatihan dan sistem membantu guru menjawab tantangan Era Digital
+            dan Merdeka Belajar.
+          </p>
+        </div>
+        <div class="p-4 lg:p-8 rounded-[25px] bg-[#fff9eb] shadow-xl">
+          <img src="images/pelatihan/penggaris.png" alt="" />
+          <h3 class="font-bold text-xl mt-3 mb-2">Terkini</h3>
+          <p class="text-gray-800">
+            Pelatihan dan sistem membantu guru menjawab tantangan Era Digital
+            dan Merdeka Belajar.
+          </p>
+        </div>
+        <div class="p-4 lg:p-8 rounded-[25px] bg-[#fff9eb] shadow-xl">
+          <img src="images/pelatihan/file.png" alt="" />
+          <h3 class="font-bold text-xl mt-3 mb-2">Terkini</h3>
+          <p class="text-gray-800">
+            Pelatihan dan sistem membantu guru menjawab tantangan Era Digital
+            dan Merdeka Belajar.
+          </p>
+        </div>
+        <div class="p-4 lg:p-8 rounded-[25px] bg-[#eef8f5] shadow-xl">
+          <img src="images/pelatihan/note.png" alt="" />
+          <h3 class="font-bold text-xl mt-3 mb-2">Terkini</h3>
+          <p class="text-gray-800">
+            Pelatihan dan sistem membantu guru menjawab tantangan Era Digital
+            dan Merdeka Belajar.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- end berfokus pada guru -->
+
+    <!-- start support system -->
+
+    <h2 class="my-7 mx-7 flex justify-center text-emerald-500">
+      Support System
+    </h2>
+    <h3
+      class="flex justify-center md:text-left text-center text-xl font-semibold text-gray-800 md:px-0 px-5"
+    >
+      Mengajar daring dan luring menjadi mudah
+    </h3>
+    <h3 class="flex justify-center text-xl font-semibold text-gray-800">
+      praktis, dan hemat waktu
+    </h3>
+    <div
+      class="mt-8 ml-4 grid md:grid-cols-2 gap-4 mr-4 lg:px-28 md:px-10 px-5"
     >
       <!-- Card 1 -->
       <div
-        class="relative group overflow-hidden shadow-xl bg-[#eef8f5] rounded-[15px] mb-8"
+        class="relative group rounded overflow-hidden shadow-xl bg-white hover:shadow-2xl"
       >
-        <div class="lg:text-left p-10 text-center">
-          <div class="w-[75px]">
-            <img src="./images/card/buku.png" alt="card 1" />
+        <div class="lg:flex lg:text-left text-center">
+          <div class="w-[200px] ml-12">
+            <img src="./images/card/kalender.png" alt="card 1" />
           </div>
-          <div class="relative z-20 lg:mt-5 mt-0">
+          <div class="relative z-10 lg:mt-12 mt-0 md:mr-8 m-8 w-[250px]">
             <!-- ... (Isi dari Card 1) ... -->
-            <h1 class="font-semibold">Pembahasan lengkap</h1>
-            <p>
-              Lebih gampang dimengerti karena ada penjelasan konsep,
-              langkah-langkah, pembuktian, dan kesimpulan.
+            <h1 class="font-semibold">Modul Ajar</h1>
+            <p class="mb-3">
+              Buat Modul Ajar dengan referensi Bank Modul Ajar.
             </p>
+            <a
+              href="https://youtu.be/xiCBGJcsB3Q?si=Ge8aT-U4IMkdwyKK"
+              class="py-2 px-2 hover:bg-slate-200 border md:mb-0 mb-5"
+              ><i class="fa-brands fa-youtube"></i> Lihat Video</a
+            >
           </div>
         </div>
-        <!-- PNG di pojok kanan -->
+        <!-- PNG di pojok kanan atas saat hover -->
         <img
           src="./images/card/hoverCard.png"
           alt="PNG"
-          class="absolute top-0 right-0"
+          class="absolute top-0 right-0 opacity-0 group-hover:opacity-100"
         />
       </div>
 
@@ -275,186 +357,220 @@
 
       <!-- Card 2 -->
       <div
-        class="relative group overflow-hidden shadow-xl bg-[#fff9eb] rounded-[15px] mt-8"
+        class="relative group rounded overflow-hidden shadow-xl bg-white hover:shadow-2xl"
       >
-        <div class="lg:text-left p-10 text-center">
-          <div class="w-[75px]">
-            <img src="./images/card/buku.png" alt="card 2" />
+        <div class="lg:flex lg:text-left text-center">
+          <div class="w-[200px] ml-12">
+            <img src="./images/card/tugas.png" alt="card 1" />
           </div>
-          <div class="relative z-20 lg:mt-5 mt-0">
+          <div class="relative z-10 lg:mt-12 mt-0 md:mr-8 m-8 w-[250px]">
             <!-- ... (Isi dari Card 1) ... -->
-            <h1 class="font-semibold">Sesuai kemampuan</h1>
-            <p>
-              Bisa memilih jumlah soal dan tingkat kesulitan yang ingin dilatih,
-              dengan urutan dan jenis soal yang diacak.
+            <h1 class="font-semibold">Kirim Tugas</h1>
+            <p class="mb-3">
+              Buat teks, lampiran file untuk kelompok atau kelas
             </p>
+            <a
+              href="https://www.youtube.com/live/VCS5IMl3q64?si=nzoVoAtaeyXDT1Po"
+              class="py-2 px-2 hover:bg-slate-200 border md:mb-0 mb-5"
+              ><i class="fa-brands fa-youtube"></i> Lihat Video</a
+            >
           </div>
         </div>
-        <!-- PNG di pojok kanan -->
+        <!-- PNG di pojok kanan atas saat hover -->
         <img
-          src="./images/card/hoverKuning.png"
+          src="./images/card/hoverCard.png"
           alt="PNG"
-          class="absolute top-0 right-0"
+          class="absolute top-0 right-0 opacity-0 group-hover:opacity-100"
         />
       </div>
 
       <!-- Card 3 -->
       <div
-        class="relative group overflow-hidden shadow-xl bg-[#fff9eb] rounded-[15px] mb-8"
+        class="relative group rounded overflow-hidden shadow-xl bg-white hover:shadow-2xl"
       >
-        <div class="lg:text-left p-10 text-center">
-          <div class="w-[75px]">
-            <img src="./images/card/buku.png" alt="card 3" />
+        <div class="lg:flex lg:text-left text-center">
+          <div class="w-[200px] ml-12">
+            <img src="./images/card/materi.png" alt="card 1" />
           </div>
-          <div class="relative z-20 lg:mt-5 mt-0">
+          <div class="relative z-10 lg:mt-12 mt-0 md:mr-8 m-8 w-[250px]">
             <!-- ... (Isi dari Card 1) ... -->
-            <h1 class="font-semibold">Dilengkapi stimulus</h1>
-            <p>
-              Ada diagram tabel, gambar, dan video untuk menjelaskan konsep dan
-              bikin belajar jadi mudah dan asyik!
-            </p>
+            <h1 class="font-semibold">Materi Ajar</h1>
+            <p class="mb-3">Unggah dan unduh video, audio, dokumen</p>
+            <a
+              href="https://www.youtube.com/live/VCS5IMl3q64?si=nzoVoAtaeyXDT1Po"
+              class="py-2 px-2 hover:bg-slate-200 border md:mb-0 mb-5"
+              ><i class="fa-brands fa-youtube"></i> Lihat Video</a
+            >
           </div>
         </div>
-        <!-- PNG di pojok kanan -->
+        <!-- PNG di pojok kanan atas saat hover -->
         <img
-          src="./images/card/hoverKuning.png"
+          src="./images/card/hoverCard.png"
           alt="PNG"
-          class="absolute top-0 right-0"
+          class="absolute top-0 right-0 opacity-0 group-hover:opacity-100"
         />
       </div>
 
       <!-- Card 4 -->
       <div
-        class="relative group overflow-hidden shadow-xl bg-[#eef8f5] rounded-[15px] mt-8"
+        class="relative group rounded overflow-hidden shadow-xl bg-white hover:shadow-2xl"
       >
-        <div class="lg:text-left p-10 text-center">
-          <div class="w-[75px]">
-            <img src="./images/card/buku.png" alt="card 4" />
+        <div class="lg:flex lg:text-left text-center">
+          <div class="w-[200px] ml-12">
+            <img src="./images/card/banksoal.png" alt="card 1" />
           </div>
-          <div class="relative z-20 lg:mt-5 mt-0">
+          <div class="relative z-10 lg:mt-12 mt-0 md:mr-8 m-8 w-[250px]">
             <!-- ... (Isi dari Card 1) ... -->
-            <h1 class="font-semibold">Selalu diperbarui</h1>
-            <p>
-              Soal selalu bertambah, termasuk AKM yang sesuai kurikulum dan tren
-              terbaru.
+            <h1 class="font-semibold">Bank Soal</h1>
+            <p class="mb-3">
+              Buat soal AKM, latihan soal ujian dengan referensi bank soal Study
+              Center
             </p>
+            <a
+              href="https://youtu.be/xiCBGJcsB3Q?si=Ge8aT-U4IMkdwyKK"
+              class="py-2 px-2 hover:bg-slate-200 border md:mb-0 mb-5"
+              ><i class="fa-brands fa-youtube"></i> Lihat Video</a
+            >
           </div>
         </div>
-        <!-- PNG di pojok kanan -->
+        <!-- PNG di pojok kanan atas saat hover -->
         <img
           src="./images/card/hoverCard.png"
           alt="PNG"
-          class="absolute top-0 right-0"
+          class="absolute top-0 right-0 opacity-0 group-hover:opacity-100"
         />
       </div>
     </div>
-    <!-- end Belajar dengan Study Center -->
+    <!-- end support system -->
 
-    <!-- Start Mengapa Study Center -->
-    <div class="lg:grid lg:grid-cols-12 gap-4 px-10 m-16">
-      <div class="col-span-6">
-        <div class="w-full lg:h-screen md:h-[30rem] flex justify-center">
+    <!-- start Study Center -->
+
+    <p class="font-bold text-3xl text-center mt-10 mb-2">Study Center</p>
+    <p class="text-center lg:text-base text-sm lg:px-20 px-5 pb-10">
+      "Berjejaring dengan Perusahaan, Menemukan Peluang Karir Anda. Raih Sukses
+      Bersama Study Center, Pintu Menuju Pendidikan Berkualitas dan Kesuksesan
+      Karir!"
+    </p>
+
+    <div class="col-span-6 flex lg:hidden">
+      <img
+        src="images/benefit/study.jpg"
+        alt="study"
+        class="object-cover flex lg:hidden"
+      />
+    </div>
+    <div class="lg:bg-transparent bg-slate-200">
+      <p class="text-center pt-5 font-semibold text-2xl lg:hidden">
+        Kelebihan yang didapat:
+      </p>
+      <div class="grid grid-cols-12 justify-center">
+        <div
+          class="col-span-6 lg:col-span-3 flex items-center flex-col justify-between py-10 lg:gap-4 gap-10"
+        >
+          <div class="flex flex-col items-center justify-center h-1/2">
+            <div
+              class="w-1/2 h-1/2 bg-white flex justify-center rounded-2xl shadow-xl overflow-hidden"
+            >
+              <img
+                src="images/benefit/company.jpg"
+                alt="Company"
+                class="object-cover"
+              />
+            </div>
+            <p class="text-sm text-center px-12 py-2">
+              Bekerjasama dengan 100 lebih perusahaan
+            </p>
+          </div>
+          <div class="flex flex-col items-center justify-center">
+            <div
+              class="w-1/2 h-1/2 bg-white flex justify-center rounded-2xl shadow-xl overflow-hidden"
+            >
+              <img
+                src="images/benefit/recruitment.jpg"
+                alt="Recruitment"
+                class="object-cover"
+              />
+            </div>
+            <p class="text-sm text-center px-12 py-2">
+              Lebih dari 100 lowongan pekerjaan tersedia
+            </p>
+          </div>
+          <div class="flex flex-col items-center justify-center">
+            <div
+              class="w-1/2 h-1/2 bg-white flex justify-center rounded-2xl shadow-xl overflow-hidden"
+            >
+              <img
+                src="images/benefit/group.jpg"
+                alt="Users"
+                class="object-cover"
+              />
+            </div>
+            <p class="text-sm text-center px-12 py-2">
+              Pengguna dari berbagai wilayah di Indonesia
+            </p>
+          </div>
+        </div>
+        <div class="lg:col-span-6 hidden lg:flex">
           <img
-            src="images/subscription/studying.jpg"
-            alt="Study"
-            class="object-contain"
+            src="images/benefit/study.jpg"
+            alt="study"
+            class="object-contain hidden lg:flex md:flex w-full"
           />
         </div>
-      </div>
-      <div class="col-span-6 flex justify-center flex-col">
-        <div class="font-bold">
-          <p class="text-3xl mb-[0.40rem]">
-            Mengapa <span class="text-teal-500">Study Center</span>
-          </p>
-          <p class="text-lg font-semibold mb-2">
-            Fasilitas lengkap & Pembahasan yang menyeluruh.
-          </p>
-          <p class="text-2xl">Ayo gabung sekarang!</p>
-        </div>
-        <div class="flex gap-10 mt-8 mb-10">
-          <div
-            class="bg-blue-100 rounded-tl-3xl rounded-br-3xl shadow-lg px-5 py-4 group hover:scale-110 duration-500"
-          >
-            <img
-              src="images/subscription/coin.png"
-              alt="Gratis"
-              class="w-28 group-hover:rotate-[25deg] group-hover:scale-125 transition-all duration-500"
-            />
-            <p class="mb-3 font-semibold text-xl">Gratis</p>
-            <p class="font-medium text-[15px]">
-              Latihan sepuasnya dengan 100.000+ soal gratis. Coba
-              <a href="" class="text-blue-700 underline">contohnya</a>
-              atau
-              <a href="" class="text-blue-700 underline">daftar</a>
-              untuk akses semua free items!
+        <div
+          class="col-span-6 lg:col-span-3 flex items-center flex-col justify-between py-10 lg:gap-2 gap-10"
+        >
+          <div class="flex flex-col items-center justify-center h-1/2">
+            <div
+              class="w-1/2 h-1/2 bg-white flex justify-center rounded-2xl shadow-xl overflow-hidden"
+            >
+              <img
+                src="images/benefit/smartphone.jpg"
+                alt="Smartphone"
+                class="object-cover"
+              />
+            </div>
+            <p class="text-sm text-center px-12 py-2">
+              Tampilan web bisa diakses dengan desktop atau mobile
             </p>
           </div>
-
-          <div
-            class="bg-teal-100 rounded-tl-3xl rounded-br-3xl shadow-lg px-5 py-4 group hover:scale-110 duration-500"
-          >
-            <img
-              src="images/subscription/key.png"
-              alt="Premium"
-              class="w-28 h-[6rem] group-hover:rotate-[25deg] group-hover:scale-125 transition-all duration-500"
-            />
-            <p class="mb-3 font-semibold text-xl">Premium</p>
-            <p class="font-medium text-[15px]">
-              Kuasai soal-soal AKM dan HOTS dengan mandiri. Tanya tutor kalau
-              masih belum jelas!
-              <a href="" class="text-blue-700 underline">Daftar</a>
+          <div class="flex flex-col items-center justify-center">
+            <div
+              class="w-1/2 h-1/2 bg-white flex justify-center rounded-2xl shadow-xl overflow-hidden"
+            >
+              <img
+                src="images/benefit/admin.jpg"
+                alt="Admin"
+                class="object-cover"
+              />
+            </div>
+            <p class="text-sm text-center px-12 py-2">
+              User dapat berinteraksi dengan admin
+            </p>
+          </div>
+          <div class="flex flex-col items-center justify-center">
+            <div
+              class="w-1/2 h-1/2 bg-white flex justify-center rounded-2xl shadow-xl overflow-hidden"
+            >
+              <img
+                src="images/benefit/web.jpg"
+                alt="Web"
+                class="object-cover"
+              />
+            </div>
+            <p class="text-sm text-center px-12 py-2">
+              Tampilan web yang memukau
             </p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- End Mengapa Study Center -->
-
-    <!-- Manfaat Berlatih di Study Center -->
-
-    <h1 class="text-center text-3xl m-16">
-      <span class="text-blue-400">MANFAAT </span>Berlatih Di <br />
-      Study Center
-    </h1>
-
-    <div class="grid grid-cols-4 gap-50 items-center">
-      <div></div>
-      <div class="">
-        <img src="./images/student/OBJECTS.png" alt="" />
-      </div>
-
-      <div
-        class="flex flex-col items-center numbered-list-container px-5 h-90 mt-[5rem]"
-      >
-        <span
-          class="flex mb-4 w-[45px] h-[45px] text-white bg-blue-500 items-center justify-center rounded-full"
-          ><h5>1</h5>
-        </span>
-        <h4 class="text-xl mb-5">fleksibilitas waktu</h4>
-        <span
-          class="flex mb-4 w-[45px] h-[45px] text-white bg-blue-600 items-center justify-center rounded-full"
-          ><h5>2</h5>
-        </span>
-        <h4 class="text-xl mb-5">Mudah Di Pahami</h4>
-        <span
-          class="flex mb-4 w-[45px] h-[45px] text-white bg-blue-700 items-center justify-center rounded-full"
-          ><h5>3</h5>
-        </span>
-        <h4 class="text-xl mb-5">Mudah Di Akses</h4>
-        <span
-          class="flex mb-4 w-[45px] h-[45px] text-white bg-blue-800 items-center justify-center rounded-full"
-          ><h5>4</h5>
-        </span>
-        <h4 class="text-xl mb-5x">Prestasi Kece</h4>
-      </div>
-    </div>
-
-    <!-- End Manfaat di Study Center -->
+    <!-- end Study Center -->
 
     <!-- start footer -->
 
-    <footer class="bg-gray-900 text-white px-16 py-20 mt-14">
+    <footer class="bg-gray-900 text-white px-16 py-20">
       <div class="lg:grid-cols-6 grid-cols-2 grid gap-10">
         <div class="col-span-2 lg:text-left text-center">
           <h4 class="font-bold text-2xl mb-3">Student Center</h4>
