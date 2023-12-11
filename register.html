@@ -18,87 +18,101 @@
     <link rel="stylesheet" href="./icon/css/all.min.css" />
     <link rel="stylesheet" href="./icon/js/all.min.js" />
   </head>
-  <body
-    class="container mx-10 my-10"
-    style="font-family: 'Poppins', sans-serif"
-  >
-    <div class="grid grid-cols-2">
-      <div class="col-span-1">
-        <div class="rounded-md bg-slate-300 px-5 py-8 text-slate-800">
-          <p class="font-semibold my-3 text-2xl">Study Center</p>
-          <p class="font-bold text-3xl">Buat Akun</p>
-          <p class="my-3 font-medium">
-              Jelajahi dunia programming dan tingkatkan keterampilanmu! Bergabunglah dengan kami untuk memulai perjalananmu menuju keahlian dalam coding dan pembuatan perangkat lunak.
-          </p>
-          <div class="grid grid-cols-2 gap-5 my-7">
-            <div class="flex flex-col">
-              <label for="">Email Kamu</label>
-              <input type="text" class="rounded-md" />
+  <body style="font-family: 'Poppins', sans-serif">
+    <div
+      class="container mx-auto md:px-20 px-6 flex justify-center items-center h-screen"
+    >
+      <div class="grid lg:grid-cols-2 overflow-hidden items-center">
+        <div class="col-span-1 md:mt-2">
+          <div class="rounded-md bg-[#a6c9ff] px-5 py-8 text-slate-800">
+            <p class="font-semibold my-3 text-2xl">Study Center</p>
+            <p class="font-bold text-3xl">Buat Akun</p>
+            <p class="my-3 font-medium">
+              Jelajahi dunia kursus programming dan tingkatkan keterampilanmu!
+              Bergabunglah dengan kami.
+            </p>
+            <div class="grid md:grid-cols-2 gap-5 my-7">
+              <div class="flex flex-col">
+                <label for="">Email Kamu</label>
+                <input
+                  placeholder="name@gmail.com"
+                  type="email"
+                  class="rounded-md bg-white/75"
+                />
+              </div>
+              <div class="flex flex-col">
+                <label for="">Nama Panjang</label>
+                <input
+                  placeholder="nama panjang anda"
+                  type="text"
+                  class="rounded-md bg-white/75"
+                />
+              </div>
+              <div class="flex flex-col">
+                <label for="">Password</label>
+                <input
+                  placeholder="*****"
+                  type="password"
+                  class="rounded-md bg-white/75"
+                />
+              </div>
+              <div class="flex flex-col">
+                <label for="">Verification Password</label>
+                <input
+                  placeholder="*****"
+                  type="password"
+                  class="rounded-md bg-white/75"
+                />
+              </div>
             </div>
-            <div class="flex flex-col">
-              <label for="">Nama Panjang</label>
-              <input type="text" class="rounded-md" />
+            <div class="flex gap-8 items-center mx-6 my-5">
+              <div class="w-full h-[0.20rem] bg-slate-400 rounded"></div>
+              <p>OR</p>
+              <div class="w-full h-[0.20rem] bg-slate-400 rounded"></div>
             </div>
-            <div class="flex flex-col">
-              <label for="">Password</label>
-              <input type="password" class="rounded-md" />
-            </div>
-            <div class="flex flex-col">
-              <label for="">Verification Password</label>
-              <input type="password" class="rounded-md" />
-            </div>
-          </div>
-          <div class="flex gap-8 items-center mx-6 my-5">
-            <div class="w-full h-[0.20rem] bg-slate-400 rounded"></div>
-            <p>OR</p>
-            <div class="w-full h-[0.20rem] bg-slate-400 rounded"></div>
-          </div>
-          <div
-            class="rounded-md border border-gray-500 flex items-center justify-center py-3 mb-5"
-          >
-            <i class="fa-brands fa-google mr-2"></i>
-            <p>Masuk dengan Google</p>
-          </div>
-          <div
-            class="rounded-md border border-gray-500 flex items-center justify-center py-3 mb-5"
-          >
-            <i class="fa-brands fa-apple mr-2"></i>
-            <p>Masuk dengan Apple</p>
-          </div>
-          <div class="flex items-center mb-4">
-            <input
-              id="default-checkbox"
-              type="checkbox"
-              value=""
-              class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-            />
-            <label for="default-checkbox" class="ms-2 text-sm font-medium"
+            <a href="#"
+              class="rounded-md flex items-center justify-center py-3 mb-5 bg-blue-400"
+            >
+                <i class="fa-brands fa-google mr-2"></i>  Masuk dengan Google
+            </a>
+            <div class="flex items-center mb-4">
+              <input
+                id="default-checkbox"
+                type="checkbox"
+                value=""
+                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+              />
+              <label for="default-checkbox" class="ms-2 lg:text-sm text-[11px] font-medium">
+                Dengan mendaftar, Anda membuka akses ke kreativitas web di
+                Flowbite! Setujui Ketentuan Penggunaan dan Kebijakan Privasi
+                kami.</label
               >
-              Dengan mendaftar, Anda membuka akses ke kreativitas web di Flowbite! Setujui Ketentuan Penggunaan dan Kebijakan Privasi kami.</label
+            </div>
+            <div class="flex items-center mb-4">
+              <input
+                id="default-checkbox"
+                type="checkbox"
+                value=""
+                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+              />
+              <label for="default-checkbox" class="ms-2 lg:text-sm  text-[11px] font-medium"
+                >Tetap terinformasi dengan pembaruan produk dan sumber daya
+                kreatif terbaru!</label
+              >
+            </div>
+            <div
+              class="rounded-md bg-blue-400 py-3 flex items-center justify-center"
             >
-          </div>
-          <div class="flex items-center mb-4">
-            <input
-              id="default-checkbox"
-              type="checkbox"
-              value=""
-              class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-            />
-            <label for="default-checkbox" class="ms-2 text-sm font-medium"
-              >Tetap terinformasi dengan pembaruan produk dan sumber daya kreatif terbaru!</label
-            >
-          </div>
-          <div
-            class="rounded-md bg-blue-600 py-3 flex items-center justify-center"
-          >
-            <p class="font-semibold text-white">Buat Akun</p>
+              <a href="#" class="font-semibold text-white">Buat Akun</a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-span-1 w-full h-full">
-        <img src="/images/login/login.jpg" alt="Login" class="" />
+        <div class="col-span-1 w-full lg:block hidden">
+          <img src="/images/login/login.jpg" alt="Login" class="" />
+        </div>
       </div>
     </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
   </body>
 </html>

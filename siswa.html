@@ -22,6 +22,7 @@
     />
     <link rel="stylesheet" href="./icon/css/all.min.css" />
     <link rel="stylesheet" href="./icon/js/all.min.js" />
+    <link rel="stylesheet" href="./aos-master/dist/aos.css" />
   </head>
   <body>
     <!-- start Navigasi Bar -->
@@ -79,7 +80,7 @@
       data-carousel="static"
     >
       <!-- Carousel wrapper -->
-      <div class="relative h-[400px] overflow-hidden rounded-lg md:h-[600px]">
+      <div class="relative overflow-hidden rounded-lg md:h-[600px]">
         <!-- Item 1 -->
         <div
           class="hidden duration-700 ease-in-out"
@@ -286,22 +287,20 @@
     <!-- end carousel -->
 
     <!-- start Belajar dengan Study Center -->
-    <div class="m-20">
-      <div class="ml-36 mb-12">
+    <div class="lg:m-20">
+      <div class="md:ml-36 mb-12 md:mt-0 mt-16 ml-4">
         <h3 class="text-[#457b9d] mb-2">Belajar dengan Study Center</h3>
-        <h2 class="font-semibold uppercase text-3xl">
+        <h2 data-aos="fade-up" class="font-semibold uppercase text-3xl">
           Mengapa Memilih Study Center?
         </h2>
       </div>
-      <div
-        class="mt-3 ml-4 grid md:grid-cols-2 gap-4 mr-4 lg:px-28 md:px-10 px-5"
-      >
+      <div class="mt-3 ml-4 grid md:grid-cols-2 gap-4 mr-4 lg:px-28 px-5">
         <!-- Card 1 -->
         <div
-          class="relative group overflow-hidden shadow-xl bg-[#9dc9de] rounded-[15px] mb-8 mr-4"
+          class="relative group overflow-hidden shadow-xl bg-[#9dc9de] rounded-[15px] md:mb-8 md:mr-4"
         >
           <div class="lg:text-left p-10 text-center">
-            <div class="w-[75px]">
+            <div class="w-[75px] md:mx-0 mx-auto md:mb-0 mb-3">
               <img src="./images/icon/1.png" alt="card 1" />
             </div>
             <div class="relative z-20 lg:mt-5 mt-0">
@@ -327,10 +326,10 @@
 
         <!-- Card 2 -->
         <div
-          class="relative group overflow-hidden shadow-xl bg-[#a8dadc] rounded-[15px] mt-8 ml-4"
+          class="relative group overflow-hidden shadow-xl bg-[#a8dadc] rounded-[15px] md:mt-8 md:ml-4"
         >
           <div class="lg:text-left p-10 text-center">
-            <div class="w-[75px]">
+            <div class="w-[75px] md:mx-0 mx-auto md:mb-0 mb-3">
               <img src="./images/icon/2.png" alt="card 2" />
             </div>
             <div class="relative z-20 lg:mt-5 mt-0">
@@ -354,10 +353,10 @@
 
         <!-- Card 3 -->
         <div
-          class="relative group overflow-hidden shadow-xl bg-[#a8dadc] rounded-[15px] mb-8 mr-4"
+          class="relative group overflow-hidden shadow-xl bg-[#a8dadc] rounded-[15px] md:mb-8 md:mr-4"
         >
           <div class="lg:text-left p-10 text-center">
-            <div class="w-[55px]">
+            <div class="w-[55px] md:mx-0 mx-auto md:mb-0 mb-3">
               <img src="./images/icon/3.png" alt="card 3" />
             </div>
             <div class="relative z-20 lg:mt-5 mt-0">
@@ -381,10 +380,10 @@
 
         <!-- Card 4 -->
         <div
-          class="relative group overflow-hidden shadow-xl bg-[#9dc9de] rounded-[15px] mt-8 ml-4"
+          class="relative group overflow-hidden shadow-xl bg-[#9dc9de] rounded-[15px] md:mt-8 md:ml-4"
         >
           <div class="lg:text-left p-10 text-center">
-            <div class="w-[75px]">
+            <div class="w-[75px] md:mx-0 mx-auto md:mb-0 mb-3">
               <img src="./images/icon/4.png" alt="card 4" />
             </div>
             <div class="relative z-20 lg:mt-5 mt-0">
@@ -411,7 +410,7 @@
     <!-- end Belajar dengan Study Center -->
 
     <!-- Start Mengapa Study Center -->
-    <div class="lg:grid lg:grid-cols-12 gap-4 px-10 m-16">
+    <div class="lg:grid lg:grid-cols-12 gap-4 md:px-10 md:m-16 m-6">
       <div class="col-span-6">
         <div class="w-full lg:h-screen md:h-[30rem] flex justify-center">
           <img
@@ -422,7 +421,7 @@
         </div>
       </div>
       <div class="col-span-6 flex justify-center flex-col">
-        <div class="font-bold">
+        <div class="font-bold lg:text-left text-center">
           <p class="text-3xl mb-[0.40rem]">
             Mengapa <span class="text-[#457b9d]">Study Center</span>
           </p>
@@ -431,7 +430,7 @@
           </p>
           <p class="text-2xl">Ayo gabung sekarang!</p>
         </div>
-        <div class="flex gap-10 mt-8 mb-10">
+        <div class="flex lg:flex-row flex-col gap-10 mt-8 mb-10">
           <div
             class="bg-blue-100 rounded-tl-3xl rounded-br-3xl shadow-lg px-5 py-4 group hover:scale-110 duration-500"
           >
@@ -446,11 +445,9 @@
             <p class="font-medium text-[15px]">
               Temukan keasyikan pemrograman dengan lebih dari courses gratis
               yang siap menguji kemampuanmu. Coba lihat
-              <a href="" class="text-blue-700 underline">courses</a>
+              <a href="" class="text-blue-700 underline">kursus</a>
               atau
               <a href="" class="text-blue-700 underline">daftar sekarang</a>
-              untuk akses ke seluruh konten gratis yang akan membantumu menjadi
-              programmer handal!
             </p>
           </div>
 
@@ -466,11 +463,10 @@
               Telusuri Dunia Kursus Programmer Premium
             </p>
             <p class="font-medium text-[15px]">
-              Kuasai berbagai kursus pemrograman dengan pengajaran mandiri.
-              Jelajahi dunia coding dan temukan solusi untuk tantangan-tantangan
-              pemrograman bersama tutor ahli kami!
+              Jelajahi dunia coding dan
+              temukan solusi untuk tantangan-tantangan pemrograman bersama tutor
+              ahli kami!
               <a href="" class="text-blue-700 underline">Mulai Sekarang</a>
-              untuk pengalaman belajar programmer yang tak tertandingi.
             </p>
           </div>
         </div>
@@ -480,40 +476,52 @@
     <!-- End Mengapa Study Center -->
 
     <!-- Manfaat Berlatih di Study Center -->
-    <h1 class="text-center text-3xl font-semibold m-16">
+    <h1 class="text-center text-3xl font-semibold md:m-16 m-8">
       <span class="text-[#457b9d]">MANFAAT </span>Berlatih di <br />
       Study Center
     </h1>
 
-    <div class="grid grid-cols-4 gap-50 items-center">
+    <div class="grid lg:grid-cols-4 gap-50 items-center">
       <div></div>
       <div class="">
-        <img src="./images/student/OBJECTS.png" alt="" />
+        <img
+          src="./images/student/OBJECTS.png"
+          class="lg:w-full md:w-[400px] w-[73%] lg:mx-0 mx-auto"
+          alt=""
+        />
       </div>
 
       <div
-        class="flex flex-col items-center numbered-list-container px-5 h-90 mt-[5rem]"
+        class="flex lg:flex-col md:flex-row flex-col items-center justify-between numbered-list-container lg:px-5 px-12 h-90 mt-[5rem]"
       >
-        <span
-          class="flex mb-4 w-[45px] h-[45px] text-white bg-blue-500 items-center justify-center rounded-full font-bold"
-          ><h5>1</h5>
-        </span>
-        <h4 class="text-xl mb-8">Fleksibilitas waktu</h4>
-        <span
-          class="flex mb-4 w-[45px] h-[45px] text-white bg-blue-600 items-center justify-center rounded-full font-bold"
-          ><h5>2</h5>
-        </span>
-        <h4 class="text-xl mb-8">Mudah di pahami</h4>
-        <span
-          class="flex mb-4 w-[45px] h-[45px] text-white bg-blue-700 items-center justify-center rounded-full font-bold"
-          ><h5>3</h5>
-        </span>
-        <h4 class="text-xl mb-8">Mudah di akses</h4>
-        <span
-          class="flex mb-4 w-[45px] h-[45px] text-white bg-blue-800 items-center justify-center rounded-full font-bold"
-          ><h5>4</h5>
-        </span>
-        <h4 class="text-xl mb-8">Prestasi kece</h4>
+        <div class="text-center">
+          <span
+            class="flex mx-auto mb-4 w-[45px] h-[45px] text-white bg-blue-500 items-center justify-center rounded-full font-bold"
+            ><h5>1</h5>
+          </span>
+          <h4 class="text-xl mb-8">Fleksibilitas waktu</h4>
+        </div>
+        <div  class="text-center">
+          <span
+            class="flex mx-auto mb-4 w-[45px] h-[45px] text-white bg-blue-600 items-center justify-center rounded-full font-bold"
+            ><h5>2</h5>
+          </span>
+          <h4 class="text-xl mb-8">Mudah di pahami</h4>
+        </div>
+        <div  class="text-center">
+          <span
+            class="flex mx-auto mb-4 w-[45px] h-[45px] text-white bg-blue-700 items-center justify-center rounded-full font-bold"
+            ><h5>3</h5>
+          </span>
+          <h4 class="text-xl mb-8">Mudah di akses</h4>
+        </div>
+        <div  class="text-center">
+          <span
+            class="flex mx-auto mb-4 w-[45px] h-[45px] text-white bg-blue-800 items-center justify-center rounded-full font-bold"
+            ><h5>4</h5>
+          </span>
+          <h4 class="text-xl mb-8">Prestasi kece</h4> 
+        </div>
       </div>
     </div>
 
@@ -574,8 +582,9 @@
     <!-- end footer -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
-
+    <script src="./aos-master/dist/aos.js"></script>
     <script>
+      AOS.init();
       window.addEventListener("scroll", function () {
         const nav = document.querySelector("nav");
         const guruBtn = document.getElementById("guruBtn");
