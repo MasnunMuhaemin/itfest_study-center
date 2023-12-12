@@ -1,108 +1,931 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Study Center</title>
-        <script src="https://cdn.tailwindcss.com"></script>
 
-        <link
-            href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css"
-            rel="stylesheet"/>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link
-            rel="preconnect"
-            href="https://fonts.gstatic.com"
-            crossorigin="crossorigin">
-        <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
-            rel="stylesheet">
-        <link rel="stylesheet" href="./icon/css/all.min.css">
-        <link rel="stylesheet" href="./icon/js/all.min.js">
-    </head>
-    <body>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <!-- start about -->
+    <title>Study Center</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 
-        <div
-            class="grid grid-cols-1 lg:grid-cols-2 px-4 lg:px-16 my-8 items-center py-8">
-            <div class="text-center lg:text-left">
-                <p class="font-semibold mb-2">WHY CHOOSE Study Center?</p>
-                <h1 class="font-bold text-3xl mb-4 lg:mb-8">
-                    Ubah hidup Anda melalui karier pendidikan
-                </h1>
-                <p class="mb-4 mr-3 lg:mb-8 font-medium">
-                    Antarmuka transparan sindikat yang kredibel dan sinergi yang berfokus pada
-                    klien. Secara obyektif merangkul fungsi virtual media informasi yang
-                    revolusioner. Proses berbasis klien miokard monontonecttaly sebelum model
-                    intermandasi prospektif.
-                </p>
-                <div class="bottom">
-                    <button
-                        class="border hover:bg-amber-200 text-gray-500 font-bold py-2 px-4 rounded">
-                        Learn More
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </button>
-                </div>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./icon/css/all.min.css"/>
+    <link rel="stylesheet" href="./aos-master/dist/aos.css" />
+
+</head>
+<body style="font-family: 'Poppins', sans-serif;" class="text-slate-600">
+
+    <nav
+      class="flex relative items-center justify-between px-8 py-8 bg-transparent text-black top-0 left-0 right-0 z-50 transition-all duration-500"
+    >
+      <div>
+        <h2 class="font-bold text-2xl text-white">Study Center</h2>
+      </div>
+      <div class="md:block hidden">
+        <a
+          id="aboutBtn"
+          href="about.html"
+          class="rounded-xl px-5 py-2 text-white font-medium duration-500 mr-2 border-2 border-white hover:bg-white hover:text-black"
+          >About</a
+        >
+        <a
+          id="guruBtn"
+          href="guru.html"
+          class="rounded-xl px-5 py-2 text-white duration-500 font-medium mr-2 border-2 border-white hover:bg-white hover:text-black"
+          >Guru</a
+        >
+        <a
+          id="siswaBtn"
+          href="siswa.html"
+          class="rounded-xl px-5 py-2 text-white font-medium duration-500 mr-2 border-2 border-white hover:bg-white hover:text-black"
+          >Siswa</a
+        >
+        <a
+          id="coursesBtn"
+          href="courses.html"
+          class="rounded-xl px-5 py-2 text-white font-medium duration-500 border-2 border-white hover:bg-white hover:text-black"
+          >Courses</a
+        >
+      </div>
+      <div class="md:hidden block" onclick="showMenu()">
+        <button><i class="fas fa-bars"></i></button>
+      </div>
+    </nav>
+
+    <!-- End Navigasi Bar -->
+
+    <!-- Start Hamburger Menu -->
+    <aside class="fixed hidden inset-0 bg-gray-600/80 z-50 items-center justify-center">
+        <button class="absolute top-0 right-0 m-5" onclick="closeMenu()">
+            <i class="fas fa-times text-xl text-white"></i>
+        </button>
+        <ul>
+            <li>
+                <a href="guru.html" class="text-white">Guru</a>
+            </li>
+            <li>
+                <a href="siswa.html" class="text-white">Murid</a>
+            </li>
+            <li>
+                <a href="about.html" class="text-white">Tentang</a>
+            </li>
+            <li>
+                <a href="courses.html" class="text-white">Kursus</a>
+            </li>
+        </ul>
+    </aside>
+
+    <!-- End Hamburger Menu -->
+
+    <!-- start Carousel -->
+    <div id="indicators-carousel" class="relative w-full -mt-[110px]" data-carousel="static">
+        <!-- Carousel wrapper -->
+        <div class="relative overflow-hidden rounded-lg md:h-[600px]">
+            <!-- Item 1 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                <section
+                    class="bg-center bg-no-repeat bg-[url('./images/slider/1.jpg')] bg-gray-700 bg-blend-multiply bg-cover">
+                    <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
+                        <h1
+                            class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">
+                            Mewujudkan Masa Depan Anda
+                        </h1>
+                        <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">
+                            Jelajahi dunia pembelajaran di Study Center, di mana kami
+                            memberikan prioritas pada teknologi, inovasi, dan investasi
+                            untuk membuka nilai jangka panjang dan mendorong pertumbuhan
+                            ekonomi.
+                        </p>
+
+                        <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
+                            <a href="register.html"
+                                class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+                                Get started
+                                <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                </svg>
+                            </a>
+                            <a href="login.html"
+                                class="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 sm:ms-4 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
+                                Bergabung Dengan Kami
+                            </a>
+                        </div>
+                    </div>
+                </section>
             </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 relative gap-4 lg:gap-8 p-4 lg:p-0">
-                <div
-                    class="p-4 lg:p-8 rounded-[25px] bg-white shadow-xl flex flex-col justify-center items-center group hover:scale-110 duration-500">
-                    <div class="w-[100px] ml-8 group-hover:rotateY-[25deg] group-hover:rotateX-[125deg] transition-all duration-500">
-                        <img src="./images/card/feature_1_1.png" alt="1"/>
-                    </div>
-                    <div class="text-center">
-                        <h3 class="font-bold text-xl mt-3 mb-2">Terkini</h3>
-                        <p class="text-gray-800">
-                            Pelatihan dan sistem membantu guru menjawab tantangan Era Digital dan Merdeka
-                            Belajar.
-                        </p>
-                    </div>
-                </div>
-                <div
-                    class="p-4 lg:p-8 rounded-[25px] bg-white shadow-xl flex flex-col justify-center items-center">
-                    <div class="w-[100px] ml-8">
-                        <img src="./images/card/feature_1_2.png" alt="1" class="group-hover:rotate-[25deg] group-hover:scale-125 transition-all duration-500"/>
-                    </div>
-                    <div class="text-center">
-                        <h3 class="font-bold text-xl mt-3 mb-2">Terkini</h3>
-                        <p class="text-gray-800">
-                            Pelatihan dan sistem membantu guru menjawab tantangan Era Digital dan Merdeka
-                            Belajar.
-                        </p>
-                    </div>
-                </div>
-                <div
-                    class="p-4 lg:p-8 rounded-[25px] bg-white shadow-xl flex flex-col justify-center items-center">
-                    <div class="w-[100px] ml-8">
-                        <img src="./images/card/feature_1_3.png" alt="1" class="group-hover:rotate-[25deg] group-hover:scale-125 transition-all duration-500"/>
-                    </div>
-                    <div class="text-center">
-                        <h3 class="font-bold text-xl mt-3 mb-2">Terkini</h3>
-                        <p class="text-gray-800">
-                            Pelatihan dan sistem membantu guru menjawab tantangan Era Digital dan Merdeka
-                            Belajar.
-                        </p>
-                    </div>
-                </div>
-                <div
-                    class="p-4 lg:p-8 rounded-[25px] bg-white shadow-xl flex flex-col justify-center items-center">
-                    <div class="w-[100px] ml-8">
-                        <img src="./images/card/feature_1_4.png" alt="1" class="group-hover:rotate-[25deg] group-hover:scale-125 transition-all duration-500"/>
-                    </div>
-                    <div class="text-center">
-                        <h3 class="font-bold text-xl mt-3 mb-2">Terkini</h3>
-                        <p class="text-gray-800">
-                            Pelatihan dan sistem membantu guru menjawab tantangan Era Digital dan Merdeka
-                            Belajar.
-                        </p>
-                    </div>
-                </div>
+            <!-- Item 2 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item="data-carousel-item">
+                <img src="./images/slider/2.jpg"
+                    class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                    alt="..." />
+            </div>
+            <!-- Item 3 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item="data-carousel-item">
+                <img src="./images/slider/3.jpg"
+                    class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                    alt="..." />
+            </div>
+            <!-- Item 4 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item="data-carousel-item">
+                <img src="./images/slider/2.jpg"
+                    class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                    alt="..." />
+            </div>
+            <!-- Item 5 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item="data-carousel-item">
+                <img src="./images/slider/3.jpg"
+                    class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                    alt="..." />
             </div>
         </div>
 
+        <!-- Slider indicators -->
 
-        <!-- end about -->
-    </body>
+        <div class="absolute z-30 flex -translate-x-1/2 space-x-3 rtl:space-x-reverse bottom-5 left-1/2">
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1"
+                data-carousel-slide-to="0"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
+                data-carousel-slide-to="1"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
+                data-carousel-slide-to="2"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4"
+                data-carousel-slide-to="3"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5"
+                data-carousel-slide-to="4"></button>
+        </div>
+
+        <!-- Slider controls -->
+
+        <button type="button"
+            class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-prev="data-carousel-prev">
+            <span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M5 1 1 5l4 4" />
+                </svg>
+                <span class="sr-only">Previous</span>
+            </span>
+        </button>
+        <button type="button"
+            class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-next="data-carousel-next">
+            <span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m1 9 4-4-4-4" />
+                </svg>
+                <span class="sr-only">Next</span>
+            </span>
+        </button>
+    </div>
+
+    <!-- end carousel -->
+
+    <!-- Start Section 1 -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 px-4 lg:px-16 my-8 items-center py-8">
+        <div class="text-center lg:text-left">
+            <p class="font-semibold mb-2" data-aos="slide-right" data-aos-duration="800">WHY CHOOSE Study Center?</p>
+            <h1 class="font-bold text-3xl mb-4 lg:mb-8" data-aos="fade" data-aos-duration="1500" data-aos-delay="800">
+                Ubah hidup Anda melalui karier pendidikan
+            </h1>
+            <p class="mb-4 mr-3 lg:mb-8 font-medium" data-aos="fade" data-aos-easing="ease-in-out"
+                data-aos-duration="1500" data-aos-delay="1500">
+                Antarmuka transparan sindikat yang kredibel dan sinergi yang berfokus pada
+                klien. Secara obyektif merangkul fungsi virtual media informasi yang
+                revolusioner. Proses berbasis klien miokard monontonecttaly sebelum model
+                intermandasi prospektif.
+            </p>
+            <div class="bottom" data-aos="zoom-in" data-aos-delay="2100" data-aos-duration="500" data-aos-offset="180">
+                <button class="border hover:bg-amber-200 duration-500 font-bold py-2 px-4 rounded group">
+                    Learn More
+                    <i class="fa-solid fa-arrow-right duration-500 group-hover:translate-x-2"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 relative gap-4 lg:gap-8 p-4 lg:p-0">
+            <div
+                class="p-4 lg:p-8 rounded-[25px] bg-white shadow-xl flex flex-col justify-center items-center group hover:scale-110 duration-500">
+                <div class="flex items-center">
+                    <img src="./images/card/feature_1_1.png" alt="1" data-aos="fade-in" data-aos-duration="1000" />
+                </div>
+                <div class="text-center">
+                    <h3 class="font-bold text-xl mt-3 mb-2" data-aos="fade-in" data-aos-duration="1000">Terkini</h3>
+                    <p class="text-sm group-hover:text-[0.980rem] duration-500" data-aos="fade-in"
+                        data-aos-duration="1000">
+                        Pelatihan dan sistem membantu guru menjawab tantangan Era Digital dan Merdeka
+                        Belajar.
+                    </p>
+                </div>
+            </div>
+
+            <div
+                class="p-4 lg:p-8 rounded-[25px] bg-white shadow-xl flex flex-col justify-center items-center group hover:scale-110 duration-500">
+                <div class="flex items-center">
+                    <img src="./images/card/feature_1_2.png" alt="1" data-aos="fade-in" data-aos-duration="1000" />
+                </div>
+                <div class="text-center">
+                    <h3 class="font-bold text-xl mt-3 mb-2" data-aos="fade-in" data-aos-duration="1000">Terkini</h3>
+                    <p class="text-sm group-hover:text-[0.980rem] duration-500" data-aos="fade-in"
+                        data-aos-duration="1000">
+                        Pelatihan dan sistem membantu guru menjawab tantangan Era Digital dan Merdeka
+                        Belajar.
+                    </p>
+                </div>
+            </div>
+
+            <div
+                class="p-4 lg:p-8 rounded-[25px] bg-white shadow-xl flex flex-col justify-center items-center group hover:scale-110 duration-500">
+                <div class="flex items-center">
+                    <img src="./images/card/feature_1_3.png" alt="1" data-aos="fade-in" data-aos-duration="1000" />
+                </div>
+                <div class="text-center">
+                    <h3 class="font-bold text-xl mt-3 mb-2" data-aos="fade-in" data-aos-duration="1000">Terkini</h3>
+                    <p class="text-sm group-hover:text-[0.980rem] duration-500" data-aos="fade-in"
+                        data-aos-duration="1000">
+                        Pelatihan dan sistem membantu guru menjawab tantangan Era Digital dan Merdeka
+                        Belajar.
+                    </p>
+                </div>
+            </div>
+
+
+            <div
+                class="p-4 lg:p-8 rounded-[25px] bg-white shadow-xl flex flex-col justify-center items-center group hover:scale-110 duration-500">
+                <div class="flex items-center">
+                    <img src="./images/card/feature_1_4.png" alt="1" data-aos="fade-in" data-aos-duration="1000" />
+                </div>
+                <div class="text-center">
+                    <h3 class="font-bold text-xl mt-3 mb-2" data-aos="fade-in" data-aos-duration="1000">Terkini</h3>
+                    <p class="text-sm group-hover:text-[0.980rem] duration-500" data-aos="fade-in"
+                        data-aos-duration="1000">
+                        Pelatihan dan sistem membantu guru menjawab tantangan Era Digital dan Merdeka
+                        Belajar.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Section 1 -->
+
+    <!-- start section 2 -->
+    <div class="lg:grid gap-4 px-10">
+        <!-- <div class="lg:col-span-6 lg:flex hidden">
+            <div class="w-full lg:h-screen md:h-[30rem] flex justify-center">
+                <img src="images/subscription/studying.jpg" alt="Study" class="object-contain">
+            </div>
+        </div> -->
+        <div class="flex justify-center flex-col">
+            <div class="font-bold text-center" data-aos="fade-down" data-aos-duration="1500"
+                data-aos-easing="ease-in-out" data-aos-offset="150">
+                <p class="text-3xl mb-6 mt-10">Kata mereka yang sudah lulus: </p>
+            </div>
+            <div class="container mx-auto">
+                <div class="grid grid-cols-3 gap-5">
+                    <div class="bg-[#f2f6fc] py-3 px-5 rounded-xl shadow-xl" id="kotak1">
+                        <div class="lg:flex gap-3">
+                            <div class="rounded-xl lg:w-[250px] overflow-hidden lg:mb-0 mb-3" data-aos="fade-in"
+                                data-aos-duration="1000">
+                                <img src="./images/card siswa/orang1.jpg" alt=""
+                                    class="w-full h-full rounded-xl object-cover" />
+                            </div>
+                            <span data-aos="fade-down" data-aos-duration="1000" data-aos-delay="600">
+                                <span class="text-3xl font-bold ml-4">“</span>
+                                <span class="pt-5 w-full text-sm font-medium">
+                                    Website ini menawarkan konten pembelajaran yang sangat informatif
+                                    dan relevan.
+                                </span>
+                            </span>
+                        </div>
+                        <hr class="mt-5" />
+                        <h3 class="flex ml-5 mt-5 font-bold text-xl" data-aos="slide-right" data-aos-duration="800"
+                            data-aos-easing="ease-in-out">Olivia</h3>
+                        <h4 class="text-slate-400 ml-5 mb-2 flex font-semibold" data-aos="fade-down"
+                            data-aos-delay="800" data-aos-duration="200">CEO Alope</h4>
+                    </div>
+                    <div class="bg-[#f2f6fc] py-3 px-5 rounded-xl shadow-xl" id="kotak2">
+                        <div class="lg:flex gap-3">
+                            <div class="rounded-xl lg:w-[250px] overflow-hidden lg:mb-0 mb-3" data-aos="fade-in"
+                                data-aos-duration="1000">
+                                <img src="./images/card siswa/orang2.jpg" alt=""
+                                    class="w-full h-full rounded-xl object-cover" />
+                            </div>
+                            <span data-aos="fade-down" data-aos-duration="1000" data-aos-delay="600">
+                                <span class="text-3xl font-bold ml-4">“</span>
+                                <span class="pt-5 w-full text-sm font-medium">
+                                    Keseluruhan, website ini memberikan platform pembelajaran yang
+                                    sangat efisien dan efektif.
+                                </span>
+                            </span>
+                        </div>
+                        <hr class="mt-5" />
+                        <h3 class="flex ml-5 mt-5 font-bold text-xl" data-aos="slide-right" data-aos-duration="800"
+                            data-aos-easing="ease-in-out">Sebastian</h3>
+                        <h4 class="text-slate-400 ml-5 mb-2 flex font-semibold" data-aos="fade-down"
+                            data-aos-delay="800" data-aos-duration="200">CEO Alope</h4>
+                    </div>
+                    <div class="bg-[#f2f6fc] py-3 px-5 rounded-xl shadow-2xl" id="kotak3">
+                        <div class="lg:flex gap-3">
+                            <div class="rounded-xl lg:w-[250px] overflow-hidden lg:mb-0 mb-3" data-aos="fade-in"
+                                data-aos-duration="1000">
+                                <img src="./images/card siswa/orang3.jpg" alt=""
+                                    class="w-full h-full rounded-xl object-cover" />
+                            </div>
+                            <span data-aos="fade-down" data-aos-duration="1000" data-aos-delay="600">
+                                <span class="text-3xl font-bold ml-4">“</span>
+                                <span class="pt-5 w-full text-sm font-medium">
+                                    Pengguna mendapatkan umpan balik yang berguna untuk mengukur
+                                    kemajuan belajar.
+                                </span>
+                            </span>
+                        </div>
+                        <hr class="mt-5" />
+                        <h3 class="flex ml-5 mt-5 font-bold text-xl" data-aos="slide-right" data-aos-duration="800"
+                            data-aos-easing="ease-in-out">Adrian</h3>
+                        <h4 class="text-slate-400 ml-5 mb-2 flex font-semibold" data-aos="fade-down"
+                            data-aos-delay="800" data-aos-duration="200">CEO Alope</h4>
+                    </div>
+                    <div class="bg-[#f2f6fc] py-3 px-5 rounded-xl shadow-2xl hidden" id="kotak4">
+                        <div class="lg:flex gap-3">
+                            <div class="rounded-xl lg:w-[250px] overflow-hidden lg:mb-0 mb-3" data-aos="fade-in"
+                                data-aos-duration="1000">
+                                <img src="./images/card siswa/orang4.jpg" alt=""
+                                    class="w-full h-full rounded-xl object-cover" />
+                            </div>
+                            <span data-aos="fade-down" data-aos-duration="1000" data-aos-delay="600">
+                                <span class="text-3xl font-bold ml-4">“</span>
+                                <span class="pt-5 w-full text-sm font-medium">
+                                    Sumber daya tambahan seperti video dan latihan memperkaya
+                                    pembelajaran.
+                                </span>
+                            </span>
+                        </div>
+                        <hr class="mt-5" />
+                        <h3 class="flex ml-5 mt-5 font-bold text-xl" data-aos="slide-right" data-aos-duration="800"
+                            data-aos-easing="ease-in-out">Isabella</h3>
+                        <h4 class="text-slate-400 ml-5 mb-2 flex font-semibold" data-aos="fade-down"
+                            data-aos-delay="800" data-aos-duration="200">CEO Alope</h4>
+                    </div>
+                    <div class="bg-[#f2f6fc] py-3 px-5 rounded-xl shadow-2xl hidden" id="kotak5">
+                        <div class="lg:flex gap-3">
+                            <div class="rounded-xl lg:w-[250px] overflow-hidden lg:mb-0 mb-3" data-aos="fade-in"
+                                data-aos-duration="1000">
+                                <img src="./images/card siswa/orang5.jpg" alt=""
+                                    class="w-full h-full rounded-xl object-cover" />
+                            </div>
+                            <span data-aos="fade-down" data-aos-duration="1000" data-aos-delay="600">
+                                <span class="text-3xl font-bold ml-4">“</span>
+                                <span class="pt-5 w-full text-sm font-medium">
+                                    Platform ini menciptakan lingkungan belajar yang inklusif dan
+                                    ramah pengguna.
+                                </span>
+                            </span>
+                        </div>
+                        <hr class="mt-5" />
+                        <h3 class="flex ml-5 mt-5 font-bold text-xl" data-aos="slide-right" data-aos-duration="800"
+                            data-aos-easing="ease-in-out">Arman</h3>
+                        <h4 class="text-slate-400 ml-5 mb-2 flex font-semibold" data-aos="fade-down"
+                            data-aos-delay="800" data-aos-duration="200">CEO Alope</h4>
+                    </div>
+                    <div class="bg-[#f2f6fc] py-3 px-5 rounded-xl shadow-2xl hidden" id="kotak6">
+                        <div class="lg:flex gap-3">
+                            <div class="rounded-xl lg:w-[250px] overflow-hidden lg:mb-0 mb-3" data-aos="fade-in"
+                                data-aos-duration="1000">
+                                <img src="./images/card siswa/orang7.jpg" alt=""
+                                    class="w-full h-full rounded-xl object-cover" />
+                            </div>
+                            <span data-aos="fade-down" data-aos-duration="1000" data-aos-delay="600">
+                                <span class="text-3xl font-bold ml-4">“</span>
+                                <span class="pt-5 w-full text-sm font-medium">
+                                    Secara keseluruhan, website ini menjadi sumber daya pembelajaran
+                                    berharga.
+                                </span>
+                            </span>
+                        </div>
+                        <hr class="mt-5" />
+                        <h3 class="flex ml-5 mt-5 font-bold text-xl" data-aos="slide-right" data-aos-duration="800"
+                            data-aos-easing="ease-in-out">Ava</h3>
+                        <h4 class="text-slate-400 ml-5 mb-2 flex font-semibold" data-aos="fade-down"
+                            data-aos-delay="800" data-aos-duration="200">CEO Alope</h4>
+                    </div>
+                    <div class="bg-[#f2f6fc] py-3 px-5 rounded-xl shadow-2xl hidden" id="kotak7">
+                        <div class="lg:flex gap-3">
+                            <div class="rounded-xl lg:w-[250px] overflow-hidden lg:mb-0 mb-3" data-aos="fade-in"
+                                data-aos-duration="1000">
+                                <img src="./images/card siswa/orang8.jpg" alt=""
+                                    class="w-full h-full rounded-xl object-cover" />
+                            </div>
+                            <span data-aos="fade-down" data-aos-duration="1000" data-aos-delay="600">
+                                <span class="text-3xl font-bold ml-4">“</span>
+                                <span class="pt-5 w-full text-sm font-medium">
+                                    Informasi yang terkini dan relevan membuat pembelajaran tetap
+                                    up-to-date.
+                                    </p>
+                                </span>
+                        </div>
+                        <hr class="mt-5" />
+                        <h3 class="flex ml-5 mt-5 font-bold text-xl" data-aos="slide-right" data-aos-duration="800"
+                            data-aos-easing="ease-in-out">Arthur</h3>
+                        <h4 class="text-slate-400 ml-5 mb-2 flex font-semibold" data-aos="fade-down"
+                            data-aos-delay="800" data-aos-duration="200">ceo alope</h4>
+                    </div>
+                    <div class="bg-[#f2f6fc] py-3 px-5 rounded-xl shadow-2xl hidden" id="kotak8">
+                        <div class="lg:flex gap-3">
+                            <div class="rounded-xl lg:w-[250px] overflow-hidden lg:mb-0 mb-3" data-aos="fade-in"
+                                data-aos-duration="1000">
+                                <img src="./images/card siswa/orang9.jpg" alt=""
+                                    class="w-full h-full rounded-xl object-cover" />
+                            </div>
+                            <span data-aos="fade-down" data-aos-duration="1000" data-aos-delay="600">
+                                <span class="text-3xl font-bold ml-4">“</span>
+                                <span class="pt-5 w-full text-sm font-medium">
+                                    Kualitas kontennya sangat relevan dan sesuai dengan kebutuhan
+                                    pembelajaran.
+                                    </p>
+                                </span>
+                        </div>
+                        <hr class="mt-5" />
+                        <h3 class="flex ml-5 mt-5 font-bold text-xl" data-aos="slide-right" data-aos-duration="800"
+                            data-aos-easing="ease-in-out">Asep</h3>
+                        <h4 class="text-slate-400 ml-5 mb-2 flex font-semibold" data-aos="fade-down"
+                            data-aos-delay="800" data-aos-duration="200">CEO Alope</h4>
+                    </div>
+                    <div class="bg-[#f2f6fc] py-3 px-5 rounded-xl shadow-2xl hidden" id="kotak9">
+                        <div class="lg:flex gap-3">
+                            <div class="rounded-xl lg:w-[250px] overflow-hidden lg:mb-0 mb-3" data-aos="fade-in"
+                                data-aos-duration="1000">
+                                <img src="./images/card siswa/orang11.jpg" alt=""
+                                    class="w-full h-full rounded-xl object-cover" />
+                            </div>
+                            <span data-aos="fade-down" data-aos-duration="1000" data-aos-delay="600">
+                                <span class="text-3xl font-bold ml-4">“</span>
+                                <span class="pt-5 w-full text-sm font-medium">
+                                    Pembelajaran interaktif, konten berkualitas, akses mudah,
+                                    pengalaman menyenangkan.
+                                    </p>
+                                </span>
+                        </div>
+                        <hr class="mt-5" />
+                        <h3 class="flex ml-5 mt-5 font-bold text-xl" data-aos="slide-right" data-aos-duration="800"
+                            data-aos-easing="ease-in-out">Agus</h3>
+                        <h4 class="text-slate-400 ml-5 mb-2 flex font-semibold" data-aos="fade-down"
+                            data-aos-delay="800" data-aos-duration="200">CEO Alope</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center mt-10 gap-4">
+                <div class="w-[10px] h-[10px] bg-blue-600 rounded-full" onclick="slide1()" id="slide1"></div>
+                <div class="w-[10px] h-[10px] bg-slate-600 rounded-full" onclick="slide2()" id="slide2"></div>
+                <div class="w-[10px] h-[10px] bg-slate-600 rounded-full" onclick="slide3()" id="slide3"></div>
+            </div>
+        </div>
+    </div>
+    <!-- end section 2 -->
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 justify-center h-screen pl-10 pr-5 lg:px-0">
+        <div class="flex justify-center">
+            <!-- gambar -->
+            <img src="images/about-1/studying.jpg" alt="Studying" class="object-contain" data-aos="fade"
+                data-aos-duration="1000">
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-1 items-center pb-7 lg:pb-0">
+            <div class="text-slate-600">
+                <p class="font-bold text-3xl mb-2" data-aos="fade-down" data-aos-duration="1600">Kenapa Kamu<br>Harus
+                    Bergabung?</p>
+                <p class="mb-10" data-aos="fade-down" data-aos-duration="500" data-aos-delay="800">Temukan pengalaman belajar yang luar biasa dan fasilitas terbaik untuk meraih kesuksesanmu! Bergabunglah dan mulailah perjalananmu menuju pengetahuan yang mendalam.</p>
+                <span class="font-semibold flex flex-col gap-3">
+                    <p data-aos="fade-up" data-aos-duration="350" data-aos-delay="1200"><i
+                            class="fa-solid fa-check mr-3 bg-teal-500 rounded-full px-[3.98px] py-1 text-white"></i>Menambah
+                        skill</p>
+                    <p data-aos="fade-up" data-aos-duration="350" data-aos-delay="1500"><i
+                            class="fa-solid fa-check mr-3 bg-teal-500 rounded-full px-[3.98px] py-1 text-white"></i>Akses
+                        ke 100K+ soal</p>
+                    <p data-aos="fade-up" data-aos-duration="350" data-aos-delay="1800"><i
+                            class="fa-solid fa-check mr-3 bg-teal-500 rounded-full px-[3.98px] py-1 text-white"></i>Akses
+                        ke 1M+ video tutorial</p>
+                </span>
+                <div data-aos="flip-up" data-aos-duration="500" data-aos-delay="2300">
+                    <button
+                        class="mt-10 border-2 border-teal-500 rounded-lg text-teal-500 px-5 py-3 font-medium hover:bg-teal-500 hover:text-white duration-500 hover:scale-105 hover:transition-all">Join
+                        Sekarang!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mx-auto">
+        <h1 class="text-3xl mb-6 text-center font-bold" data-aos="fade-down" data-aos-duration="1500"
+            data-aos-easing="ease-in-out" data-aos-offset="150">
+            Guru yang berkompeten:
+        </h1>
+        <div class="grid grid-cols-2 gap-5">
+            <div class="bg-[#f2f6fc] py-3 px-5 rounded-xl shadow-2xl flex flex-col justify-between" id="guru1"
+                data-aos="zoom-in" data-aos-duration="1000">
+                <div class="lg:flex gap-1">
+                    <div class="rounded-xl lg:w-[250px] overflow-hidden flex justify-center">
+                        <img src="./images/card guru/guru1.jpg" alt=""
+                            class="sm:h-44 md:h-56 md:w-auto rounded-xl object-cover mb-4 lg:mb-0" />
+                    </div>
+                    <span class="text-3xl font-bold ml-4">“</span>
+                    <span class="pt-5 w-full text-sm">
+                        Saya Rachel, seorang guru
+                        <span class="font-bold">Study Center</span> dengan latar belakang
+                        pendidikan sebagai lulusan dari University of Oxford. Saya
+                        memiliki pengalaman dalam mengajar dan berkomitmen untuk
+                        memberikan pembelajaran yang interaktif dan menyenangkan. Keahlian
+                        saya mencakup kalkulus1, kalkulus2, dan kalkulus3, dengan tujuan
+                        membantu siswa mencapai potensi terbaik mereka. Mari bersama-sama
+                        menjelajahi dunia belajar online dengan semangat dan dedikasi!
+                    </span>
+                </div>
+                <div class="">
+                    <hr class="mt-5" />
+                    <h3 class="flex ml-5 mt-5 font-bold text-xl">Rachel</h3>
+                    <h4 class="text-slate-400 ml-5 mb-2 flex font-semibold">Kalkulus</h4>
+                </div>
+            </div>
+            <div class="bg-[#f2f6fc] py-3 px-5 rounded-xl shadow-2xl" id="guru2" data-aos="zoom-in"
+                data-aos-duration="1000">
+                <div class="lg:flex gap-1">
+                    <div class="rounded-xl lg:w-[250px] overflow-hidden flex justify-center">
+                        <img src="./images/card guru/guru2.jpg" alt=""
+                            class="sm:h-44 md:h-56 md:w-auto rounded-xl object-cover mb-4 lg:mb-0" />
+                    </div>
+                    <span class="text-3xl font-bold ml-4">“</span>
+                    <span class="pt-5 w-full text-sm">
+                        Saya Dylan, seorang guru
+                        <span class="font-bold">Study Center</span> dengan latar belakang
+                        pendidikan sebagai lulusan dari University of Oxford. Saya
+                        memiliki pengalaman dalam mengajar dan berkomitmen untuk
+                        memberikan pembelajaran yang interaktif dan menyenangkan. Keahlian
+                        saya mencakup pemograman website, dengan tujuan membantu siswa
+                        mencapai potensi terbaik mereka. Mari bersama-sama menjelajahi
+                        dunia belajar online dengan semangat dan dedikasi!
+                    </span>
+                </div>
+                <hr class="mt-5" />
+                <h3 class="flex ml-5 mt-5 font-bold text-xl">Dylan</h3>
+                <h4 class="text-slate-400 ml-5 mb-2 flex font-semibold">Pemograman Website</h4>
+            </div>
+            <div class="bg-[#f2f6fc] py-3 px-5 rounded-xl shadow-xl hidden" id="guru3" data-aos="zoom-in"
+                data-aos-duration="1000">
+                <div class="lg:flex gap-1">
+                    <div class="rounded-xl lg:w-[250px] overflow-hidden flex justify-center">
+                        <img src="./images/card guru/guru3.jpg" alt=""
+                            class="sm:h-44 md:h-56 md:w-auto rounded-xl object-cover mb-4 lg:mb-0" />
+                    </div>
+                    <span class="text-3xl font-bold ml-4">“</span>
+                    <span class="pt-5 w-full text-sm">
+                        Halo, saya Mike, lulusan dari Universitas Institut Teknologi
+                        Bandung, saya sekarang seorang guru
+                        <span class="font-bold">Study Center</span> saya memiliki keahlian
+                        khusus dalam Algoritma Pemrograman. Saya berkomitmen untuk
+                        memberikan pengalaman belajar online yang interaktif dan
+                        memotivasi. Dengan pendekatan yang ramah dan penekanan pada
+                        pemahaman konsep, saya yakin dapat membantu Anda mencapai tujuan
+                        belajar Anda. Ayo bersama-sama menjelajahi dan memperdalam
+                        pengetahuan kita!
+                    </span>
+                </div>
+                <hr class="mt-5" />
+                <h3 class="flex ml-5 mt-5 font-bold text-xl">Mike</h3>
+                <h4 class="text-slate-400 ml-5 mb-2 flex font-semibold">Algoritma Pemograman</h4>
+            </div>
+            <div class="bg-[#f2f6fc] py-3 px-5 rounded-xl shadow-xl hidden" id="guru4" data-aos="zoom-in"
+                data-aos-duration="1000">
+                <div class="flex flex-col justify-between">
+                    <div class="lg:flex gap-1">
+                        <div class="rounded-xl lg:w-[250px] overflow-hidden flex justify-center">
+                            <img src="./images/card guru/guru4.jpg" alt=""
+                                class="sm:h-44 md:h-56 md:w-auto rounded-xl object-cover mb-4 lg:mb-0" />
+                        </div>
+                        <span class="text-3xl font-bold ml-4">“</span>
+                        <span class="pt-5 w-full text-sm">
+                            Halo, saya Mia, lulusan dari Birmingham City University. Dengan
+                            pengalaman mengajar selama 5 tahun, saya telah mengembangkan
+                            kompetensi dalam Design Grafis Saya berkomitmen untuk menyediakan
+                            pembelajaran yang interaktif, mendalam, dan mendukung pertumbuhan
+                            siswa. Mari bersama-sama menjelajahi pengetahuan dan mencapai
+                            prestasi bersama di dunia pembelajaran online!
+                        </span>
+                    </div>
+                    <div class="">
+                        <hr class="mt-5" />
+                        <h3 class="flex ml-5 mt-5 font-bold text-xl">Mia</h3>
+                        <h4 class="text-slate-400 ml-5 mb-2 flex font-semibold">Design Grafis</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-[#f2f6fc] py-3 px-5 rounded-xl shadow-xl hidden" id="guru5" data-aos="zoom-in"
+                data-aos-duration="1000">
+                <div class="lg:flex gap-1">
+                    <div class="rounded-xl lg:w-[250px] overflow-hidden flex justify-center">
+                        <img src="./images/card guru/guru5.jpg" alt=""
+                            class="sm:h-44 md:h-56 md:w-auto rounded-xl object-cover mb-4 lg:mb-0" />
+                    </div>
+                    <span class="text-3xl font-bold ml-4">“</span>
+                    <span class="pt-5 w-full text-sm">
+                        Halo, saya Jason, lulusan dari Harvard University. Dengan
+                        pengalaman mengajar selama 3 tahun, saya memiliki Keahlian
+                        mencakup Logika Informatika, dan saya berdedikasi untuk membantu
+                        siswa mencapai potensi maksimal mereka. Saya percaya pada
+                        pendekatan pembelajaran yang interaktif dan mendukung, serta siap
+                        untuk membimbing Anda dalam perjalanan belajar online. Ayo
+                        bersama-sama menjelajahi dan meraih kesuksesan bersama!
+                    </span>
+                </div>
+                <hr class="mt-5" />
+                <h3 class="flex ml-5 mt-5 font-bold text-xl">Jason</h3>
+                <h4 class="text-slate-400 ml-5 mb-2 flex font-semibold">Logika Informatika</h4>
+            </div>
+            <div class="bg-[#f2f6fc] py-3 px-5 rounded-xl shadow-xl hidden" id="guru6" data-aos="zoom-in"
+                data-aos-duration="1000">
+                <div class="lg:flex gap-1">
+                    <div class="rounded-xl lg:w-[250px] overflow-hidden flex justify-center">
+                        <img src="./images/card guru/guru6.jpg" alt=""
+                            class="sm:h-44 md:h-56 md:w-auto rounded-xl object-cover mb-4 lg:mb-0" />
+                    </div>
+                    <span class="text-3xl font-bold ml-4">“</span>
+                    <span class="pt-5 w-full text-sm">
+                        Halo, nama saya Arthur, lulusan dari Universitas Indonesia. Saya
+                        adalah seorang guru online yang berfokus pada materi bahasa
+                        inggris dengan pengalaman mengajar selama lebih dari 15 tahun
+                        tahun dan saya berkomitmen untuk membantu siswa mencapai potensi
+                        maksimal mereka melalui pembelajaran online yang interaktif dan
+                        mendalam. Mari bersama-sama mengeksplorasi dunia pengetahuan dan
+                        mencapai kesuksesan bersama!
+                    </span>
+                </div>
+                <hr class="mt-5" />
+                <h3 class="flex ml-5 mt-5 font-bold text-xl">Arthur</h3>
+                <h4 class="text-slate-400 ml-5 mb-2 flex font-semibold">Bahasa inggris</h4>
+            </div>
+        </div>
+    </div>
+    <div class="flex justify-center mt-12 gap-4">
+        <div class="w-[10px] h-[10px] bg-blue-600 rounded-full" onclick="slide_guru1()" id="slide_guru1"></div>
+        <div class="w-[10px] h-[10px] bg-slate-600 rounded-full" onclick="slide_guru2()" id="slide_guru2"></div>
+        <div class="w-[10px] h-[10px] bg-slate-600 rounded-full" onclick="slide_guru3()" id="slide_guru3"></div>
+
+    </div>
+
+    <!-- Start section 3 -->
+
+    <!-- End section 3 -->
+
+    <!-- Start section 4 -->
+    <!-- <section>
+        <h1 class="text-3xl mb-10 text-center font-bold">
+            Kata Mereka Yang Sudah Lulus:
+        </h1>
+
+        <div class="grid grid-cols-3 gap-4 mx-14 mb-10">
+            <div class="text-center rounded-3xl shadow-xl border-2 px-7 pb-6 pt-2">
+                <img src="./images/about/orang1.png" alt="" />
+                <h1 class="mt-3 text-lg font-bold">Rushel</h1>
+                <div class="flex gap-3 justify-center mt-3 mb-5">
+                    <i class="fa-solid fa-star scale-125"></i> <i class="fa-solid fa-star scale-125"></i>
+                    <i class="fa-solid fa-star scale-125"></i> <i class="fa-solid fa-star scale-125"></i>
+                </div>
+                <p class="text-center text-md font-medium">
+                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+                    dolores ea dolorem architecto iste quas tempora incidunt inventore!
+                    Tempora, id!""
+                </p>
+            </div>
+            <div class="text-center rounded-3xl shadow-xl border-2 px-7 pb-6 pt-2">
+                <img src="./images/about/orang2.png" alt="" />
+                <h1 class="mt-3 text-lg font-bold">Jessica</h1>
+                <div class="flex gap-3 justify-center mt-3 mb-5">
+                    <i class="fa-solid fa-star scale-125"></i> <i class="fa-solid fa-star scale-125"></i>
+                    <i class="fa-solid fa-star scale-125"></i> <i class="fa-solid fa-star scale-125"></i>
+                </div>
+                <p class="text-center text-md font-medium">
+                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+                    dolores ea dolorem architecto iste quas tempora incidunt inventore!
+                    Tempora, id!""
+                </p>
+            </div>
+            <div class="text-center rounded-3xl shadow-xl border-2 px-7 pb-6 pt-2">
+                <img src="./images/about/orang 5.png" alt="" />
+                <h1 class="mt-3 text-lg font-bold">Michael</h1>
+                <div class="flex gap-3 justify-center mt-3 mb-5">
+                    <i class="fa-solid fa-star scale-125"></i> <i class="fa-solid fa-star scale-125"></i>
+                    <i class="fa-solid fa-star scale-125"></i> <i class="fa-solid fa-star scale-125"></i>
+                </div>
+                <p class="text-center text-md font-medium">
+                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+                    dolores ea dolorem architecto iste quas tempora incidunt inventore!
+                    Tempora, id!""
+                </p>
+            </div>
+        </div>
+    </section> -->
+    <!-- End section 4 -->
+
+    <!-- start footer -->
+
+    <footer class="bg-gray-900 text-white px-16 py-20 mt-14">
+        <div class="lg:grid-cols-6 grid-cols-2 grid gap-10">
+            <div class="col-span-2 lg:text-left text-center">
+                <h4 class="font-bold text-2xl mb-3">Student Center</h4>
+                <p class="text-gray-200">
+                    Nikmati suasana belajar yang inspiratif dan dukungan penuh dari mentor berpengalaman. Kami hadir untuk membantu Anda mencapai potensi terbaik Anda!
+                </p>
+            </div>
+            <div class="lg:text-left text-center lg:ml-12">
+                <h5 class="font-bold text-xl mb-3">Guru</h5>
+                <ul>
+                  <li><a href="guru.html" class="hover:text-blue-700">Home</a></li>
+                </ul>
+            </div>
+            <div class="lg:text-left text-center">
+                <h5 class="font-bold text-xl mb-3">Siswa</h5>
+                <ul>
+                    <li><a href="siswa.html" class="hover:text-blue-700">Home</a></li>
+                </ul>
+            </div>
+            <div class="col-span-2 lg:text-left text-center">
+                <h5>Ingin Mulai Petualangan Belajar?</h5>
+                <p>Temukan serunya belajar dengan kami!</p>
+                <button
+                  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md mt-3 lg:mt-3"
+                >
+                  Daftar Sekarang
+                </button>
+              </div>
+            <div class="lg:col-span-6 col-span-2">
+                <hr class="my-5 border-gray-600" />
+                <p class="text-center text-gray-200">
+                    &copy Copyright Barudak Alope Junior
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- end footer -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
+    <script src="./aos-master/dist/aos.js"></script>
+    <script src="./icon/js/all.min.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        window.addEventListener("scroll", function () {
+            const nav = document.querySelector("nav");
+            const guruBtn = document.getElementById("guruBtn");
+            const siswaBtn = document.getElementById("siswaBtn");
+            nav.classList.toggle("!bg-[#457b9d]", window.scrollY > 500);
+            nav.classList.toggle("!text-white", window.scrollY > 500);
+            nav.classList.toggle("!fixed", window.scrollY > 500);
+            nav.classList.toggle("md:!px-20", window.scrollY > 500);
+            nav.classList.toggle("!px-7", window.scrollY > 500);
+            nav.classList.toggle("!py-5", window.scrollY > 500);
+            guruBtn.classList.toggle("border-white", window.scrollY > 500);
+            guruBtn.classList.toggle("hover:text-teal-500", window.scrollY > 500);
+            siswaBtn.classList.toggle("border-white", window.scrollY > 500);
+            siswaBtn.classList.toggle("hover:text-teal-500", window.scrollY > 500);
+        });
+    </script>
+    <script>
+        window.addEventListener("scroll", function () {
+            const nav = document.querySelector("nav");
+            const guruBtn = document.getElementById("guruBtn");
+            const siswaBtn = document.getElementById("siswaBtn");
+            const aboutBtn = document.getElementById("aboutBtn");
+            nav.classList.toggle("!bg-[#457b9d]", window.scrollY > 500);
+            nav.classList.toggle("!text-white", window.scrollY > 500);
+            nav.classList.toggle("!fixed", window.scrollY > 500);
+            nav.classList.toggle("md:!px-20", window.scrollY > 500);
+            nav.classList.toggle("!px-7", window.scrollY > 500);
+            nav.classList.toggle("!py-5", window.scrollY > 500);
+            guruBtn.classList.toggle("border-white", window.scrollY > 500);
+            guruBtn.classList.toggle("hover:text-teal-500", window.scrollY > 500);
+            siswaBtn.classList.toggle("border-white", window.scrollY > 500);
+            siswaBtn.classList.toggle("hover:text-teal-500", window.scrollY > 500);
+            aboutBtn.classList.toggle("border-white", window.scrollY > 500);
+            aboutBtn.classList.toggle("hover:text-teal-500", window.scrollY > 500);
+        });
+
+        const showMenu = () => {
+            const aside = document.querySelector("aside");
+            aside.classList.remove("hidden");
+            aside.classList.add("flex");
+        };
+        const closeMenu = () => {
+            const aside = document.querySelector("aside");
+            aside.classList.add("hidden");
+            aside.classList.remove("flex");
+        };
+        function slide1() {
+            document.getElementById("slide1").classList.add("bg-blue-600");
+            document.getElementById("slide1").classList.remove("bg-slate-600");
+            document.getElementById("slide2").classList.add("bg-slate-600");
+            document.getElementById("slide2").classList.remove("bg-blue-600");
+            document.getElementById("slide3").classList.add("bg-slate-600");
+            document.getElementById("slide3").classList.remove("bg-blue-600");
+            document.getElementById("kotak1").classList.remove("hidden");
+            document.getElementById("kotak2").classList.remove("hidden");
+            document.getElementById("kotak3").classList.remove("hidden");
+            document.getElementById("kotak4").classList.add("hidden");
+            document.getElementById("kotak5").classList.add("hidden");
+            document.getElementById("kotak6").classList.add("hidden");
+            document.getElementById("kotak7").classList.add("hidden");
+            document.getElementById("kotak8").classList.add("hidden");
+            document.getElementById("kotak9").classList.add("hidden");
+        }
+        function slide2() {
+            document.getElementById("slide2").classList.remove("bg-slate-600");
+            document.getElementById("slide2").classList.add("bg-blue-600");
+            document.getElementById("slide1").classList.remove("bg-blue-600");
+            document.getElementById("slide1").classList.add("bg-slate-600");
+            document.getElementById("slide3").classList.remove("bg-blue-600");
+            document.getElementById("slide3").classList.add("bg-slate-600");
+            document.getElementById("kotak1").classList.add("hidden");
+            document.getElementById("kotak2").classList.add("hidden");
+            document.getElementById("kotak3").classList.add("hidden");
+            document.getElementById("kotak4").classList.remove("hidden");
+            document.getElementById("kotak5").classList.remove("hidden");
+            document.getElementById("kotak6").classList.remove("hidden");
+            document.getElementById("kotak7").classList.add("hidden");
+            document.getElementById("kotak8").classList.add("hidden");
+            document.getElementById("kotak9").classList.add("hidden");
+        }
+        function slide3() {
+            document.getElementById("slide2").classList.remove("bg-blue-600");
+            document.getElementById("slide2").classList.add("bg-slate-600");
+            document.getElementById("slide1").classList.add("bg-slate-600");
+            document.getElementById("slide1").classList.remove("bg-blue-600");
+            document.getElementById("slide3").classList.add("bg-blue-600");
+            document.getElementById("slide3").classList.remove("bg-slate-600");
+            document.getElementById("kotak1").classList.add("hidden");
+            document.getElementById("kotak2").classList.add("hidden");
+            document.getElementById("kotak3").classList.add("hidden");
+            document.getElementById("kotak4").classList.add("hidden");
+            document.getElementById("kotak5").classList.add("hidden");
+            document.getElementById("kotak6").classList.add("hidden");
+            document.getElementById("kotak7").classList.remove("hidden");
+            document.getElementById("kotak8").classList.remove("hidden");
+            document.getElementById("kotak9").classList.remove("hidden");
+        }
+        function slide_guru1() {
+            document.getElementById("slide_guru1").classList.add("bg-blue-600");
+            document.getElementById("slide_guru1").classList.remove("bg-slate-600");
+            document.getElementById("slide_guru2").classList.add("bg-slate-600");
+            document.getElementById("slide_guru2").classList.remove("bg-blue-600");
+            document.getElementById("slide_guru3").classList.add("bg-slate-600");
+            document.getElementById("slide_guru3").classList.remove("bg-blue-600");
+            document.getElementById("guru1").classList.remove("hidden");
+            document.getElementById("guru2").classList.remove("hidden");
+            document.getElementById("guru3").classList.add("hidden");
+            document.getElementById("guru4").classList.add("hidden");
+            document.getElementById("guru5").classList.add("hidden");
+            document.getElementById("guru6").classList.add("hidden");
+        }
+        function slide_guru2() {
+            document.getElementById("slide_guru2").classList.remove("bg-slate-600");
+            document.getElementById("slide_guru2").classList.add("bg-blue-600");
+            document.getElementById("slide_guru1").classList.remove("bg-blue-600");
+            document.getElementById("slide_guru1").classList.add("bg-slate-600");
+            document.getElementById("slide_guru3").classList.remove("bg-blue-600");
+            document.getElementById("slide_guru3").classList.add("bg-slate-600");
+            document.getElementById("guru1").classList.add("hidden");
+            document.getElementById("guru2").classList.add("hidden");
+            document.getElementById("guru3").classList.remove("hidden");
+            document.getElementById("guru4").classList.remove("hidden");
+            document.getElementById("guru5").classList.add("hidden");
+            document.getElementById("guru6").classList.add("hidden");
+        }
+        function slide_guru3() {
+            document.getElementById("slide_guru2").classList.remove("bg-blue-600");
+            document.getElementById("slide_guru2").classList.add("bg-slate-600");
+            document.getElementById("slide_guru1").classList.add("bg-slate-600");
+            document.getElementById("slide_guru1").classList.remove("bg-blue-600");
+            document.getElementById("slide_guru3").classList.add("bg-blue-600");
+            document.getElementById("slide_guru3").classList.remove("bg-slate-600");
+            document.getElementById("guru1").classList.add("hidden");
+            document.getElementById("guru2").classList.add("hidden");
+            document.getElementById("guru3").classList.add("hidden");
+            document.getElementById("guru4").classList.add("hidden");
+            document.getElementById("guru5").classList.remove("hidden");
+            document.getElementById("guru6").classList.remove("hidden");
+        }
+    </script>
+</body>
 </html>

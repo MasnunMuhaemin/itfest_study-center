@@ -21,12 +21,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./icon/css/all.min.css" />
-    <link rel="stylesheet" href="./icon/js/all.min.js" />
     <link rel="stylesheet" href="./aos-master/dist/aos.css" />
   </head>
-  <body>
+  <body style="font-family: 'Poppins', sans-serif" class="text-slate-600">
     <!-- start Navigasi Bar -->
-
     <nav
       class="flex relative items-center justify-between px-8 py-8 bg-transparent text-black top-0 left-0 right-0 z-50 transition-all duration-500"
     >
@@ -34,6 +32,12 @@
         <h2 class="font-bold text-2xl text-white">Study Center</h2>
       </div>
       <div class="md:block hidden">
+        <a
+          id="aboutBtn"
+          href="about.html"
+          class="rounded-xl px-5 py-2 text-white font-medium duration-500 mr-2 border-2 border-white hover:bg-white hover:text-black"
+          >About</a
+        >
         <a
           id="guruBtn"
           href="guru.html"
@@ -43,8 +47,14 @@
         <a
           id="siswaBtn"
           href="siswa.html"
-          class="rounded-xl px-5 py-2 text-white font-medium duration-500 border-2 border-white hover:bg-white hover:text-black"
+          class="rounded-xl px-5 py-2 text-white font-medium duration-500 mr-2 border-2 border-white hover:bg-white hover:text-black"
           >Siswa</a
+        >
+        <a
+          id="coursesBtn"
+          href="courses.html"
+          class="rounded-xl px-5 py-2 text-white font-medium duration-500 border-2 border-white hover:bg-white hover:text-black"
+          >Courses</a
         >
       </div>
       <div class="md:hidden block" onclick="showMenu()">
@@ -66,7 +76,13 @@
           <a href="guru.html" class="text-white">Guru</a>
         </li>
         <li>
-          <a href="siswa.html" class="text-white">Murid</a>
+          <a href="siswa.html" class="text-white">siswa</a>
+        </li>
+        <li>
+          <a href="about.html" class="text-white">Tentang</a>
+        </li>
+        <li>
+          <a href="courses.html" class="text-white">Kursus</a>
         </li>
       </ul>
     </aside>
@@ -110,7 +126,7 @@
                 class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0"
               >
                 <a
-                  href="#"
+                  href="login.html"
                   class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
                 >
                   Get started
@@ -131,10 +147,10 @@
                   </svg>
                 </a>
                 <a
-                  href="#"
+                  href="register.html"
                   class="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 sm:ms-4 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400"
                 >
-                  Learn more
+                  Bergabung Dengan Kami
                 </a>
               </div>
             </div>
@@ -157,7 +173,7 @@
           data-carousel-item="data-carousel-item"
         >
           <img
-            src="./images/slider/1.jpg"
+            src="./images/slider/3.jpg"
             class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
             alt="..."
           />
@@ -179,7 +195,7 @@
           data-carousel-item="data-carousel-item"
         >
           <img
-            src="./images/slider/1.jpg"
+            src="./images/slider/3.jpg"
             class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
             alt="..."
           />
@@ -288,19 +304,26 @@
 
     <!-- Start card courses -->
     <div
-      class="mt-8 ml-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mr-4"
+      class="mt-8 mb-8 ml-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mr-4"
     >
       <!-- Card 1 -->
-      <div class="max-w-sm rounded overflow-hidden shadow-lg">
+      <div
+        data-aos="fade-up"
+        data-aos-duration="3000"
+        class="max-w-sm rounded overflow-hidden shadow-lg"
+      >
         <img
           class="w-full h-48 object-cover"
           src="./images/courses/1.jpg"
           alt="Card Image 1"
         />
         <div class="px-6 py-4">
-          <div class="font-bold text-xl">Kalkulus</div>
-          <p class="text-gray-700 text-base font-semibold">Jerome polin</p>
-          <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, eligendi.</p>
+          <div class="font-bold text-2xl">Kalkulus</div>
+          <p class="text-gray-700 text-base font-semibold">Rachel</p>
+          <p class="text-sm mt-2">
+            Kalkulus adalah cabang matematika yang menggabungkan konsep limit,
+            turunan, dan integral.
+          </p>
           <!-- Tautan Learn More -->
           <a
             href="#"
@@ -312,15 +335,23 @@
       </div>
 
       <!-- Card 2 -->
-      <div class="max-w-sm rounded overflow-hidden shadow-lg">
+      <div
+        data-aos="fade-up"
+        data-aos-duration="3000"
+        class="max-w-sm rounded overflow-hidden shadow-lg"
+      >
         <img
           class="w-full h-48 object-cover"
           src="./images/courses/2.jpg"
           alt="Card Image 2"
         />
         <div class="px-6 py-4">
-          <div class="font-bold text-xl">Karedok</div>
-          <p class="text-gray-700 text-base">Jawa Barat</p>
+          <div class="font-bold text-2xl">Pemrograman Web</div>
+          <p class="text-gray-700 text-base font-semibold">Dylan</p>
+          <p class="text-sm mt-2">
+            Pemrograman web adalah keterampilan yang membuka pintu menuju dunia
+            digital dengan memahami pemrograman web.
+          </p>
           <!-- Tautan Learn More -->
           <a
             href="#"
@@ -332,15 +363,23 @@
       </div>
 
       <!-- Card 3 -->
-      <div class="max-w-sm rounded overflow-hidden shadow-lg">
+      <div
+        data-aos="fade-up"
+        data-aos-duration="3000"
+        class="max-w-sm rounded overflow-hidden shadow-lg"
+      >
         <img
           class="w-full h-48 object-cover"
           src="./images/courses/3.jpg"
           alt="Card Image 3"
         />
         <div class="px-6 py-4">
-          <div class="font-bold text-xl">Kerak Telor</div>
-          <p class="text-gray-700 text-base">DKI Jakarta</p>
+          <div class="font-bold text-2xl">Algoritma</div>
+          <p class="text-gray-700 text-base font-semibold">Mike</p>
+          <p class="text-sm mt-2">
+            Belajar algoritma dan pemrograman menawarkan kelebihan yang menarik
+            dengan mengasah logika dan pemecahan masalah.
+          </p>
           <!-- Tautan Learn More -->
           <a
             href="#"
@@ -352,15 +391,23 @@
       </div>
 
       <!-- Card 4 -->
-      <div class="max-w-sm rounded overflow-hidden shadow-lg">
+      <div
+        data-aos="fade-up"
+        data-aos-duration="3000"
+        class="max-w-sm rounded overflow-hidden shadow-lg"
+      >
         <img
           class="w-full h-48 object-cover"
           src="./images/courses/4.jpg"
           alt="Card Image 4"
         />
         <div class="px-6 py-4">
-          <div class="font-bold text-xl">Mie Aceh</div>
-          <p class="text-gray-700 text-base">Aceh Darrussalam</p>
+          <div class="font-bold text-2xl">Logika Informatika</div>
+          <p class="text-gray-700 text-base font-semibold">Jason</p>
+          <p class="text-sm mt-2">
+            Mendalami logika informatika dan pemrograman memberikan keahlian
+            untuk memecahkan masalah kompleks.
+          </p>
           <!-- Tautan Learn More -->
           <a
             href="#"
@@ -372,15 +419,23 @@
       </div>
 
       <!-- Card 5 -->
-      <div class="max-w-sm rounded overflow-hidden shadow-lg">
+      <div
+        data-aos="fade-up"
+        data-aos-duration="3500"
+        class="max-w-sm rounded overflow-hidden shadow-lg"
+      >
         <img
           class="w-full h-48 object-cover"
           src="./images/courses/5.jpg"
           alt="Card Image 5"
         />
         <div class="px-6 py-4">
-          <div class="font-bold text-xl">Papeda</div>
-          <p class="text-gray-700 text-base">Papua</p>
+          <div class="font-bold text-2xl">Bahasa Inggris</div>
+          <p class="text-gray-700 text-base font-semibold">Arthur</p>
+          <p class="text-sm mt-2">
+            Meningkatkan keterampilan berbahasa global, membuka pintu kesempatan
+            internasional.
+          </p>
           <!-- Tautan Learn More -->
           <a
             href="#"
@@ -392,15 +447,23 @@
       </div>
 
       <!-- Card 6 -->
-      <div class="max-w-sm rounded overflow-hidden shadow-lg">
+      <div
+        data-aos="fade-up"
+        data-aos-duration="3500"
+        class="max-w-sm rounded overflow-hidden shadow-lg"
+      >
         <img
           class="w-full h-48 object-cover"
           src="./images/courses/6.jpg"
           alt="Card Image 6"
         />
         <div class="px-6 py-4">
-          <div class="font-bold text-xl">Pempek</div>
-          <p class="text-gray-700 text-base">Palembang</p>
+          <div class="font-bold text-2xl">Manajemen Umum</div>
+          <p class="text-gray-700 text-base font-semibold">Michael</p>
+          <p class="text-sm mt-2">
+            Menguasai manajemen umum membuka pintu akses ke pemahamantentang
+            operasi bisnis.
+          </p>
           <!-- Tautan Learn More -->
           <a
             href="#"
@@ -412,15 +475,23 @@
       </div>
 
       <!-- Card 7 -->
-      <div class="max-w-sm rounded overflow-hidden shadow-lg">
+      <div
+        data-aos="fade-up"
+        data-aos-duration="3500"
+        class="max-w-sm rounded overflow-hidden shadow-lg"
+      >
         <img
           class="w-full h-48 object-cover"
           src="./images/courses/7.jpg"
           alt="Card Image 7"
         />
         <div class="px-6 py-4">
-          <div class="font-bold text-xl">Rendang</div>
-          <p class="text-gray-700 text-base">Sumatra Barat</p>
+          <div class="font-bold text-xl">Desain Grafis</div>
+          <p class="text-gray-700 text-base font-semibold">Kenny</p>
+          <p class="text-sm mt-2">
+            Menggali kreativitas dengan desain grafis 3D untuk proyek visual
+            yang memukau.
+          </p>
           <!-- Tautan Learn More -->
           <a
             href="#"
@@ -430,51 +501,76 @@
           </a>
         </div>
       </div>
+      <div
+        data-aos="fade-up"
+        data-aos-duration="3500"
+        class="max-w-sm rounded overflow-hidden !h-[332px]"
+      >
+        <div class="grid grid-cols-2 gap-2">
+          <img
+            class="w-full h-[125px] object-cover"
+            src="./images/courses/4.jpg"
+            alt="Card Image "
+          />
+          <img
+            class="w-full h-[125px] object-cover"
+            src="./images/courses/3.jpg"
+            alt="Card Image "
+          />
+          <img
+            class="w-full h-[125px] object-cover"
+            src="./images/courses/2.jpg"
+            alt="Card Image "
+          />
+          <img
+            class="w-full h-[125px] object-cover"
+            src="./images/courses/1.jpg"
+            alt="Card Image "
+          />
+        </div>
+        <a
+          href="#"
+          class="block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4"
+        >
+          Learn More
+        </a>
+      </div>
     </div>
 
     <!-- End card courses -->
 
     <!-- start footer -->
 
-    <footer class="bg-gray-900 text-white px-16 py-20 mt-14">
+    <footer class="bg-gray-900 text-white px-16 py-20">
       <div class="lg:grid-cols-6 grid-cols-2 grid gap-10">
         <div class="col-span-2 lg:text-left text-center">
           <h4 class="font-bold text-2xl mb-3">Student Center</h4>
 
           <p class="text-gray-200">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis,
-            cum!
+            Nikmati suasana belajar yang inspiratif dan dukungan penuh dari
+            mentor berpengalaman. Kami hadir untuk membantu Anda mencapai
+            potensi terbaik Anda!
           </p>
         </div>
-        <div class="lg:text-left text-center">
+        <div class="lg:text-left text-center lg:ml-12">
           <h5 class="font-bold text-xl mb-3">Guru</h5>
           <ul>
-            <li>home</li>
-            <li>about</li>
-            <li>pruduct</li>
-            <li>kontak</li>
+            <li><a href="guru.html" class="hover:text-blue-700">Home</a></li>
           </ul>
         </div>
         <div class="lg:text-left text-center">
           <h5 class="font-bold text-xl mb-3">Siswa</h5>
           <ul>
-            <li>home</li>
-            <li>about</li>
-            <li>pruduct</li>
-            <li>kontak</li>
+            <li><a href="siswa.html" class="hover:text-blue-700">Home</a></li>
           </ul>
         </div>
         <div class="col-span-2 lg:text-left text-center">
-          <h5 class="font-bold text-xl mb-3">Kontak</h5>
-          <input
-            type="text"
-            placeholder="Masukan Email"
-            class="border py-2 px-5 rounded-full"
-          />
+          <h5>Ingin Mulai Petualangan Belajar?</h5>
+          <p>Temukan serunya belajar dengan kami!</p>
           <button
-            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mt-3 lg:mt-3"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md mt-3 lg:mt-3"
           >
-            Subscribe
+            Daftar Sekarang
           </button>
         </div>
         <div class="lg:col-span-6 col-span-2">
@@ -490,12 +586,15 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
     <script src="./aos-master/dist/aos.js"></script>
+    <script src="./icon/js/all.min.js"></script>
     <script>
       AOS.init();
       window.addEventListener("scroll", function () {
         const nav = document.querySelector("nav");
         const guruBtn = document.getElementById("guruBtn");
         const siswaBtn = document.getElementById("siswaBtn");
+        const aboutBtn = document.getElementById("aboutBtn");
+        const coursesBtn = document.getElementById("coursesBtn");
         nav.classList.toggle("!bg-[#457b9d]", window.scrollY > 500);
         nav.classList.toggle("!text-white", window.scrollY > 500);
         nav.classList.toggle("!fixed", window.scrollY > 500);
@@ -506,6 +605,13 @@
         guruBtn.classList.toggle("hover:text-teal-500", window.scrollY > 500);
         siswaBtn.classList.toggle("border-white", window.scrollY > 500);
         siswaBtn.classList.toggle("hover:text-teal-500", window.scrollY > 500);
+        aboutBtn.classList.toggle("border-white", window.scrollY > 500);
+        aboutBtn.classList.toggle("hover:text-teal-500", window.scrollY > 500);
+        coursesBtn.classList.toggle("border-white", window.scrollY > 500);
+        coursesBtn.classList.toggle(
+          "hover:text-teal-500",
+          window.scrollY > 500
+        );
       });
 
       const showMenu = () => {
