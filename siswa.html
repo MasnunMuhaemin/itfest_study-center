@@ -1,683 +1,462 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Study Center</title>
-    <script src="https://cdn.tailwindcss.com"></script>
 
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin="crossorigin"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./icon/css/all.min.css" />
-    <link rel="stylesheet" href="./icon/js/all.min.js" />
-    <link rel="stylesheet" href="./aos-master/dist/aos.css" />
-  </head>
-  <body>
-    <!-- start Navigasi Bar -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Study Center</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <nav
-      class="flex relative items-center justify-between px-8 py-8 bg-transparent text-black top-0 left-0 right-0 z-50 transition-all duration-500"
-    >
-      <div>
-        <h2 class="font-bold text-2xl text-white">Study Center</h2>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./icon/css/all.min.css" />
+  <link rel="stylesheet" href="./icon/js/all.min.js" />
+  <link rel="stylesheet" href="./aos-master/dist/aos.css" />
+</head>
+
+<body>
+  <!-- start Navigasi Bar -->
+
+  <nav
+    class="flex relative items-center justify-between px-8 py-8 bg-transparent text-black top-0 left-0 right-0 z-50 transition-all duration-500">
+    <div>
+      <h2 class="font-bold text-2xl text-white">Study Center</h2>
+    </div>
+    <div class="md:block hidden">
+      <a id="guruBtn" href="guru.html"
+        class="rounded-xl px-5 py-2 text-white duration-500 font-medium mr-2 border-2 border-white hover:bg-white hover:text-black">Guru</a>
+      <a id="siswaBtn" href="siswa.html"
+        class="rounded-xl px-5 py-2 text-white font-medium duration-500 border-2 border-white hover:bg-white hover:text-black">Siswa</a>
+    </div>
+    <div class="md:hidden block" onclick="showMenu()">
+      <button><i class="fas fa-bars"></i></button>
+    </div>
+  </nav>
+
+  <!-- End Navigasi Bar -->
+
+  <!-- Start Hamburger Menu -->
+  <aside class="fixed hidden inset-0 bg-gray-600/80 z-50 items-center justify-center">
+    <button class="absolute top-0 right-0 m-5" onclick="closeMenu()">
+      <i class="fas fa-times text-xl text-white"></i>
+    </button>
+    <ul>
+      <li>
+        <a href="guru.html" class="text-white">Guru</a>
+      </li>
+      <li>
+        <a href="siswa.html" class="text-white">Murid</a>
+      </li>
+    </ul>
+  </aside>
+
+  <!-- End Hamburger Menu -->
+
+  <!-- start Carousel -->
+  <div id="indicators-carousel" class="relative w-full -mt-[110px]" data-carousel="static">
+    <!-- Carousel wrapper -->
+    <div class="relative overflow-hidden rounded-lg md:h-[600px]">
+      <!-- Item 1 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+        <section
+          class="bg-center bg-no-repeat bg-[url('./images/slider/1.jpg')] bg-gray-700 bg-blend-multiply bg-cover">
+          <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
+            <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">
+              Mewujudkan Masa Depan Anda
+            </h1>
+            <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">
+              Jelajahi dunia pembelajaran di Study Center, di mana kami
+              memberikan prioritas pada teknologi, inovasi, dan investasi
+              untuk membuka nilai jangka panjang dan mendorong pertumbuhan
+              ekonomi.
+            </p>
+
+            <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
+              <a href="#"
+                class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+                Get started
+                <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                  fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M1 5h12m0 0L9 1m4 4L9 9" />
+                </svg>
+              </a>
+              <a href="#"
+                class="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 sm:ms-4 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
+                Learn more
+              </a>
+            </div>
+          </div>
+        </section>
       </div>
-      <div class="md:block hidden">
-        <a
-          id="guruBtn"
-          href="guru.html"
-          class="rounded-xl px-5 py-2 text-white duration-500 font-medium mr-2 border-2 border-white hover:bg-white hover:text-black"
-          >Guru</a
-        >
-        <a
-          id="siswaBtn"
-          href="siswa.html"
-          class="rounded-xl px-5 py-2 text-white font-medium duration-500 border-2 border-white hover:bg-white hover:text-black"
-          >Siswa</a
-        >
+      <!-- Item 2 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item="data-carousel-item">
+        <img src="./images/slider/2.jpg"
+          class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+          alt="..." />
       </div>
-      <div class="md:hidden block" onclick="showMenu()">
-        <button><i class="fas fa-bars"></i></button>
+      <!-- Item 3 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item="data-carousel-item">
+        <img src="./images/slider/3.jpg"
+          class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+          alt="..." />
       </div>
-    </nav>
+      <!-- Item 4 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item="data-carousel-item">
+        <img src="./images/slider/2.jpg"
+          class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+          alt="..." />
+      </div>
+      <!-- Item 5 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item="data-carousel-item">
+        <img src="./images/slider/3.jpg"
+          class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+          alt="..." />
+      </div>
+    </div>
 
-    <!-- End Navigasi Bar -->
+    <!-- Slider indicators -->
 
-    <!-- Start Hamburger Menu -->
-    <aside
-      class="fixed hidden inset-0 bg-gray-600/80 z-50 items-center justify-center"
-    >
-      <button class="absolute top-0 right-0 m-5" onclick="closeMenu()">
-        <i class="fas fa-times text-xl text-white"></i>
-      </button>
-      <ul>
-        <li>
-          <a href="guru.html" class="text-white">Guru</a>
-        </li>
-        <li>
-          <a href="siswa.html" class="text-white">Murid</a>
-        </li>
-      </ul>
-    </aside>
+    <div class="absolute z-30 flex -translate-x-1/2 space-x-3 rtl:space-x-reverse bottom-5 left-1/2">
+      <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1"
+        data-carousel-slide-to="0"></button>
+      <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
+        data-carousel-slide-to="1"></button>
+      <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
+        data-carousel-slide-to="2"></button>
+      <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4"
+        data-carousel-slide-to="3"></button>
+      <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5"
+        data-carousel-slide-to="4"></button>
+    </div>
 
-    <!-- End Hamburger Menu -->
+    <!-- Slider controls -->
 
-    <!-- start Carousel -->
+    <button type="button"
+      class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+      data-carousel-prev="data-carousel-prev">
+      <span
+        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+        <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 6 10">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M5 1 1 5l4 4" />
+        </svg>
+        <span class="sr-only">Previous</span>
+      </span>
+    </button>
+    <button type="button"
+      class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+      data-carousel-next="data-carousel-next">
+      <span
+        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+        <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 6 10">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="m1 9 4-4-4-4" />
+        </svg>
+        <span class="sr-only">Next</span>
+      </span>
+    </button>
+  </div>
+
+  <!-- end carousel -->
+
+  <!-- start Belajar dengan Study Center -->
+  <div class="lg:m-20">
+    <div class="md:ml-36 mb-12 md:mt-0 mt-16 ml-4">
+      <h3 data-aos="fade-down" class="text-[#457b9d] mb-2">
+        Belajar dengan Study Center
+      </h3>
+      <h2 data-aos="fade-up" class="font-semibold uppercase text-3xl">
+        Mengapa Memilih Study Center?
+      </h2>
+    </div>
+    <div class="mt-3 ml-4 grid md:grid-cols-2 gap-4 mr-4 lg:px-28 px-5">
+      <!-- Card 1 -->
+      <div class="relative group overflow-hidden shadow-xl bg-[#9dc9de] rounded-[15px] md:mb-8 md:mr-4">
+        <div class="lg:text-left p-10 text-center">
+          <div data-aos="fade-right" class="w-[75px] md:mx-0 mx-auto md:mb-0 mb-3">
+            <img src="./images/icon/1.png" alt="card 1" />
+          </div>
+          <div class="relative z-20 lg:mt-5 mt-0">
+            <!-- ... (Isi dari Card 1) ... -->
+            <h1 data-aos="fade-right" class="font-semibold text-[20px] text-gray-800">
+              Pembahasan lengkap
+            </h1>
+            <p data-aos="fade-right" class="text-gray-700">
+              Lebih gampang dimengerti karena ada penjelasan konsep,
+              langkah-langkah, pembuktian, dan kesimpulan.
+            </p>
+          </div>
+        </div>
+        <!-- PNG di pojok kanan -->
+        <!-- <img
+            src="./images/card/hoverCard.png"
+            alt="PNG"
+            class="absolute top-0 right-0"
+          /> -->
+      </div>
+
+      <!-- Replicate the above structure for other cards -->
+
+      <!-- Card 2 -->
+      <div class="relative group overflow-hidden shadow-xl bg-[#a8dadc] rounded-[15px] md:mt-8 md:ml-4">
+        <div class="lg:text-left p-10 text-center">
+          <div data-aos="fade-left" class="w-[75px] md:mx-0 mx-auto md:mb-0 mb-3">
+            <img src="./images/icon/2.png" alt="card 2" />
+          </div>
+          <div class="relative z-20 lg:mt-5 mt-0">
+            <!-- ... (Isi dari Card 1) ... -->
+            <h1 data-aos="fade-left" class="font-semibold text-[20px] text-gray-800">
+              Belajar dengan Para Ahli
+            </h1>
+            <p data-aos="fade-left" class="text-gray-700 font-normal">
+              Bisa memilih jumlah soal dan tingkat kesulitan yang ingin
+              dilatih, dengan urutan dan jenis soal yang diacak.
+            </p>
+          </div>
+        </div>
+        <!-- PNG di pojok kanan -->
+        <!-- <img
+            src="./images/card/hoverKuning.png"
+            alt="PNG"
+            class="absolute top-0 right-0"
+          /> -->
+      </div>
+
+      <!-- Card 3 -->
+      <div class="relative group overflow-hidden shadow-xl bg-[#a8dadc] rounded-[15px] md:mb-8 md:mr-4">
+        <div class="lg:text-left p-10 text-center">
+          <div data-aos="fade-right" class="w-[55px] md:mx-0 mx-auto md:mb-0 mb-3">
+            <img src="./images/icon/3.png" alt="card 3" />
+          </div>
+          <div class="relative z-20 lg:mt-5 mt-0">
+            <!-- ... (Isi dari Card 1) ... -->
+            <h1 data-aos="fade-right" class="font-semibold text-[20px] text-gray-800">
+              Dilengkap dengan Video Pembelajaran
+            </h1>
+            <p data-aos="fade-right" class="text-gray-700 font-normal">
+              Ada diagram tabel, gambar, dan video untuk menjelaskan konsep
+              dan membuat belajar menjadi mudah dan menyenangkan!
+            </p>
+          </div>
+        </div>
+        <!-- PNG di pojok kanan -->
+        <!-- <img
+            src="./images/card/hoverKuning.png"
+            alt="PNG"
+            class="absolute top-0 right-0"
+          /> -->
+      </div>
+
+      <!-- Card 4 -->
+      <div class="relative group overflow-hidden shadow-xl bg-[#9dc9de] rounded-[15px] md:mt-8 md:ml-4">
+        <div class="lg:text-left p-10 text-center">
+          <div data-aos="fade-left" class="w-[75px] md:mx-0 mx-auto md:mb-0 mb-3">
+            <img src="./images/icon/4.png" alt="card 4" />
+          </div>
+          <div class="relative z-20 lg:mt-5 mt-0">
+            <!-- ... (Isi dari Card 1) ... -->
+            <h1 data-aos="fade-left" class="font-semibold text-[20px] text-gray-800">
+              Kurikulum Up-to-date
+            </h1>
+            <p data-aos="fade-left" class="text-gray-700 font-normal">
+              Soal selalu bertambah, termasuk AKM yang sesuai dengan kurikulum
+              dan tren terbaru.
+            </p>
+          </div>
+        </div>
+        <!-- PNG di pojok kanan -->
+        <!-- <img
+            src="./images/card/hoverCard.png"
+            alt="PNG"
+            class="absolute top-0 right-0"
+          /> -->
+      </div>
+    </div>
+  </div>
+
+  <!-- end Belajar dengan Study Center -->
+
+  <!-- Start Mengapa Study Center -->
+  <div class="lg:grid lg:grid-cols-12 gap-4 md:px-10 md:m-16 m-6">
+    <div class="col-span-6">
+      <div data-aos="fade-right" data-aos-offset="500" data-aos-easing="ease-in-sine"
+        class="w-full lg:h-screen md:h-[30rem] flex justify-center">
+        <img src="images/subscription/studying.jpg" alt="Study" class="object-contain" />
+      </div>
+    </div>
+    <div class="col-span-6 flex justify-center flex-col">
+      <div class="font-bold lg:text-left text-center">
+        <p data-aos="fade-up" data-aos-duration="500" class="text-3xl mb-[0.40rem]">
+          Mengapa <span class="text-[#457b9d]">Study Center</span>
+        </p>
+        <p data-aos="fade-up" data-aos-duration="1000" class="text-lg font-semibold mb-2">
+          Fasilitas lengkap & Pembahasan yang menyeluruh.
+        </p>
+        <p data-aos="fade-up" data-aos-duration="1500" class="text-2xl">
+          Ayo gabung sekarang!
+        </p>
+      </div>
+      <div class="flex lg:flex-row flex-col gap-10 mt-8 mb-10">
+        <div class="bg-blue-100 rounded-tl-3xl rounded-br-3xl shadow-lg px-5 py-4 group hover:scale-110 duration-500">
+          <img src="images/subscription/coin.png" alt="Gratis"
+            class="w-28 group-hover:rotate-[25deg] group-hover:scale-125 transition-all duration-500" />
+          <p data-aos="fade-right" data-aos-duration="250" class="mb-3 font-semibold text-xl">
+            Eksplorasi Dunia Programming Tanpa Batas!
+          </p>
+          <p data-aos="fade-right" data-aos-duration="350" class="font-medium text-[15px]">
+            Temukan keasyikan pemrograman dengan lebih dari courses gratis
+            yang siap menguji kemampuanmu. Coba lihat
+            <a href="" class="text-blue-700 underline">kursus</a>
+            atau
+            <a href="" class="text-blue-700 underline">daftar sekarang</a>
+          </p>
+        </div>
+
+        <div class="bg-[#afcfe6] rounded-tl-3xl rounded-br-3xl shadow-lg px-5 py-4 group hover:scale-110 duration-500">
+          <img src="images/subscription/key.png" alt="Premium"
+            class="w-28 h-[6rem] group-hover:rotate-[25deg] group-hover:scale-125 transition-all duration-500" />
+          <p data-aos="fade-left" data-aos-duration="250" class="mb-3 font-semibold text-xl">
+            Telusuri Dunia Kursus Programmer Premium
+          </p>
+          <p data-aos="fade-left" data-aos-duration="350" class="font-medium text-[15px]">
+            Jelajahi dunia coding dan temukan solusi untuk tantangan-tantangan
+            pemrograman bersama tutor ahli kami!
+            <a href="" class="text-blue-700 underline">Mulai Sekarang</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- End Mengapa Study Center -->
+
+  <!-- Manfaat Berlatih di Study Center -->
+  <h1 data-aos="fade-up" class="text-center text-3xl font-semibold md:m-16 m-8">
+    <span class="text-[#457b9d]">MANFAAT </span>Berlatih di <br />
+    Study Center
+  </h1>
+
+  <div class="grid lg:grid-cols-4 gap-50 items-center">
+    <div></div>
+    <div data-aos="fade-right" data-aos-offset="150" data-aos-easing="ease-in-sine">
+      <img src="./images/student/OBJECTS.png" class="lg:w-full md:w-[400px] w-[73%] lg:mx-0 mx-auto" alt="" />
+    </div>
+
     <div
-      id="indicators-carousel"
-      class="relative w-full -mt-[110px]"
-      data-carousel="static"
-    >
-      <!-- Carousel wrapper -->
-      <div class="relative overflow-hidden rounded-lg md:h-[600px]">
-        <!-- Item 1 -->
-        <div
-          class="hidden duration-700 ease-in-out"
-          data-carousel-item="active"
-        >
-          <section
-            class="bg-center bg-no-repeat bg-[url('./images/slider/1.jpg')] bg-gray-700 bg-blend-multiply bg-cover"
-          >
-            <div
-              class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56"
-            >
-              <h1
-                class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl"
-              >
-                Mewujudkan Masa Depan Anda
-              </h1>
-              <p
-                class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48"
-              >
-                Jelajahi dunia pembelajaran di Study Center, di mana kami
-                memberikan prioritas pada teknologi, inovasi, dan investasi
-                untuk membuka nilai jangka panjang dan mendorong pertumbuhan
-                ekonomi.
-              </p>
-
-              <div
-                class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0"
-              >
-                <a
-                  href="#"
-                  class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
-                >
-                  Get started
-                  <svg
-                    class="w-3.5 h-3.5 ms-2 rtl:rotate-180"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 14 10"
-                  >
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M1 5h12m0 0L9 1m4 4L9 9"
-                    />
-                  </svg>
-                </a>
-                <a
-                  href="#"
-                  class="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 sm:ms-4 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400"
-                >
-                  Learn more
-                </a>
-              </div>
-            </div>
-          </section>
-        </div>
-        <!-- Item 2 -->
-        <div
-          class="hidden duration-700 ease-in-out"
-          data-carousel-item="data-carousel-item"
-        >
-          <img
-            src="./images/slider/2.jpg"
-            class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-            alt="..."
-          />
-        </div>
-        <!-- Item 3 -->
-        <div
-          class="hidden duration-700 ease-in-out"
-          data-carousel-item="data-carousel-item"
-        >
-          <img
-            src="./images/slider/3.jpg"
-            class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-            alt="..."
-          />
-        </div>
-        <!-- Item 4 -->
-        <div
-          class="hidden duration-700 ease-in-out"
-          data-carousel-item="data-carousel-item"
-        >
-          <img
-            src="./images/slider/2.jpg"
-            class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-            alt="..."
-          />
-        </div>
-        <!-- Item 5 -->
-        <div
-          class="hidden duration-700 ease-in-out"
-          data-carousel-item="data-carousel-item"
-        >
-          <img
-            src="./images/slider/3.jpg"
-            class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-            alt="..."
-          />
-        </div>
-      </div>
-
-      <!-- Slider indicators -->
-
-      <div
-        class="absolute z-30 flex -translate-x-1/2 space-x-3 rtl:space-x-reverse bottom-5 left-1/2"
-      >
-        <button
-          type="button"
-          class="w-3 h-3 rounded-full"
-          aria-current="true"
-          aria-label="Slide 1"
-          data-carousel-slide-to="0"
-        ></button>
-        <button
-          type="button"
-          class="w-3 h-3 rounded-full"
-          aria-current="false"
-          aria-label="Slide 2"
-          data-carousel-slide-to="1"
-        ></button>
-        <button
-          type="button"
-          class="w-3 h-3 rounded-full"
-          aria-current="false"
-          aria-label="Slide 3"
-          data-carousel-slide-to="2"
-        ></button>
-        <button
-          type="button"
-          class="w-3 h-3 rounded-full"
-          aria-current="false"
-          aria-label="Slide 4"
-          data-carousel-slide-to="3"
-        ></button>
-        <button
-          type="button"
-          class="w-3 h-3 rounded-full"
-          aria-current="false"
-          aria-label="Slide 5"
-          data-carousel-slide-to="4"
-        ></button>
-      </div>
-
-      <!-- Slider controls -->
-
-      <button
-        type="button"
-        class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-        data-carousel-prev="data-carousel-prev"
-      >
-        <span
-          class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
-        >
-          <svg
-            class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewbox="0 0 6 10"
-          >
-            <path
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M5 1 1 5l4 4"
-            />
-          </svg>
-          <span class="sr-only">Previous</span>
+      class="flex lg:flex-col md:flex-row flex-col items-center justify-between numbered-list-container lg:px-5 px-12 h-90 mt-[5rem]">
+      <div class="text-center">
+        <span data-aos="fade-up"
+          class="flex mx-auto mb-4 w-[45px] h-[45px] text-white bg-blue-500 items-center justify-center rounded-full font-bold">
+          <h5>1</h5>
         </span>
-      </button>
-      <button
-        type="button"
-        class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-        data-carousel-next="data-carousel-next"
-      >
-        <span
-          class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
-        >
-          <svg
-            class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewbox="0 0 6 10"
-          >
-            <path
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="m1 9 4-4-4-4"
-            />
-          </svg>
-          <span class="sr-only">Next</span>
+        <h4 data-aos="fade-up" class="text-xl mb-8">Fleksibilitas waktu</h4>
+      </div>
+      <div class="text-center">
+        <span data-aos="fade-up"
+          class="flex mx-auto mb-4 w-[45px] h-[45px] text-white bg-blue-600 items-center justify-center rounded-full font-bold">
+          <h5>2</h5>
         </span>
-      </button>
-    </div>
-
-    <!-- end carousel -->
-
-    <!-- start Belajar dengan Study Center -->
-    <div class="lg:m-20">
-      <div class="md:ml-36 mb-12 md:mt-0 mt-16 ml-4">
-        <h3 data-aos="fade-down" class="text-[#457b9d] mb-2">
-          Belajar dengan Study Center
-        </h3>
-        <h2 data-aos="fade-up" class="font-semibold uppercase text-3xl">
-          Mengapa Memilih Study Center?
-        </h2>
+        <h4 data-aos="fade-up" class="text-xl mb-8">Mudah di pahami</h4>
       </div>
-      <div class="mt-3 ml-4 grid md:grid-cols-2 gap-4 mr-4 lg:px-28 px-5">
-        <!-- Card 1 -->
-        <div
-          class="relative group overflow-hidden shadow-xl bg-[#9dc9de] rounded-[15px] md:mb-8 md:mr-4"
-        >
-          <div class="lg:text-left p-10 text-center">
-            <div
-              data-aos="fade-right"
-              class="w-[75px] md:mx-0 mx-auto md:mb-0 mb-3"
-            >
-              <img src="./images/icon/1.png" alt="card 1" />
-            </div>
-            <div class="relative z-20 lg:mt-5 mt-0">
-              <!-- ... (Isi dari Card 1) ... -->
-              <h1
-                data-aos="fade-right"
-                class="font-semibold text-[20px] text-gray-800"
-              >
-                Pembahasan lengkap
-              </h1>
-              <p data-aos="fade-right" class="text-gray-700">
-                Lebih gampang dimengerti karena ada penjelasan konsep,
-                langkah-langkah, pembuktian, dan kesimpulan.
-              </p>
-            </div>
-          </div>
-          <!-- PNG di pojok kanan -->
-          <!-- <img
-            src="./images/card/hoverCard.png"
-            alt="PNG"
-            class="absolute top-0 right-0"
-          /> -->
-        </div>
-
-        <!-- Replicate the above structure for other cards -->
-
-        <!-- Card 2 -->
-        <div
-          class="relative group overflow-hidden shadow-xl bg-[#a8dadc] rounded-[15px] md:mt-8 md:ml-4"
-        >
-          <div class="lg:text-left p-10 text-center">
-            <div
-              data-aos="fade-left"
-              class="w-[75px] md:mx-0 mx-auto md:mb-0 mb-3"
-            >
-              <img src="./images/icon/2.png" alt="card 2" />
-            </div>
-            <div class="relative z-20 lg:mt-5 mt-0">
-              <!-- ... (Isi dari Card 1) ... -->
-              <h1
-                data-aos="fade-left"
-                class="font-semibold text-[20px] text-gray-800"
-              >
-                Belajar dengan Para Ahli
-              </h1>
-              <p data-aos="fade-left" class="text-gray-700 font-normal">
-                Bisa memilih jumlah soal dan tingkat kesulitan yang ingin
-                dilatih, dengan urutan dan jenis soal yang diacak.
-              </p>
-            </div>
-          </div>
-          <!-- PNG di pojok kanan -->
-          <!-- <img
-            src="./images/card/hoverKuning.png"
-            alt="PNG"
-            class="absolute top-0 right-0"
-          /> -->
-        </div>
-
-        <!-- Card 3 -->
-        <div
-          class="relative group overflow-hidden shadow-xl bg-[#a8dadc] rounded-[15px] md:mb-8 md:mr-4"
-        >
-          <div class="lg:text-left p-10 text-center">
-            <div
-              data-aos="fade-right"
-              class="w-[55px] md:mx-0 mx-auto md:mb-0 mb-3"
-            >
-              <img src="./images/icon/3.png" alt="card 3" />
-            </div>
-            <div class="relative z-20 lg:mt-5 mt-0">
-              <!-- ... (Isi dari Card 1) ... -->
-              <h1
-                data-aos="fade-right"
-                class="font-semibold text-[20px] text-gray-800"
-              >
-                Dilengkap dengan Video Pembelajaran
-              </h1>
-              <p data-aos="fade-right" class="text-gray-700 font-normal">
-                Ada diagram tabel, gambar, dan video untuk menjelaskan konsep
-                dan membuat belajar menjadi mudah dan menyenangkan!
-              </p>
-            </div>
-          </div>
-          <!-- PNG di pojok kanan -->
-          <!-- <img
-            src="./images/card/hoverKuning.png"
-            alt="PNG"
-            class="absolute top-0 right-0"
-          /> -->
-        </div>
-
-        <!-- Card 4 -->
-        <div
-          class="relative group overflow-hidden shadow-xl bg-[#9dc9de] rounded-[15px] md:mt-8 md:ml-4"
-        >
-          <div class="lg:text-left p-10 text-center">
-            <div
-              data-aos="fade-left"
-              class="w-[75px] md:mx-0 mx-auto md:mb-0 mb-3"
-            >
-              <img src="./images/icon/4.png" alt="card 4" />
-            </div>
-            <div class="relative z-20 lg:mt-5 mt-0">
-              <!-- ... (Isi dari Card 1) ... -->
-              <h1
-                data-aos="fade-left"
-                class="font-semibold text-[20px] text-gray-800"
-              >
-                Kurikulum Up-to-date
-              </h1>
-              <p data-aos="fade-left" class="text-gray-700 font-normal">
-                Soal selalu bertambah, termasuk AKM yang sesuai dengan kurikulum
-                dan tren terbaru.
-              </p>
-            </div>
-          </div>
-          <!-- PNG di pojok kanan -->
-          <!-- <img
-            src="./images/card/hoverCard.png"
-            alt="PNG"
-            class="absolute top-0 right-0"
-          /> -->
-        </div>
+      <div class="text-center">
+        <span data-aos="fade-up"
+          class="flex mx-auto mb-4 w-[45px] h-[45px] text-white bg-blue-700 items-center justify-center rounded-full font-bold">
+          <h5>3</h5>
+        </span>
+        <h4 data-aos="fade-up" class="text-xl mb-8">Mudah di akses</h4>
+      </div>
+      <div class="text-center">
+        <span data-aos="fade-up"
+          class="flex mx-auto mb-4 w-[45px] h-[45px] text-white bg-blue-800 items-center justify-center rounded-full font-bold">
+          <h5>4</h5>
+        </span>
+        <h4 data-aos="fade-up" class="text-xl mb-8">Prestasi kece</h4>
       </div>
     </div>
+  </div>
 
-    <!-- end Belajar dengan Study Center -->
+  <!-- End Manfaat di Study Center -->
 
-    <!-- Start Mengapa Study Center -->
-    <div class="lg:grid lg:grid-cols-12 gap-4 md:px-10 md:m-16 m-6">
-      <div class="col-span-6">
-        <div
-          data-aos="fade-right"
-          data-aos-offset="500"
-          data-aos-easing="ease-in-sine"
-          class="w-full lg:h-screen md:h-[30rem] flex justify-center"
-        >
-          <img
-            src="images/subscription/studying.jpg"
-            alt="Study"
-            class="object-contain"
-          />
-        </div>
+  <!-- start footer -->
+
+  <footer class="bg-gray-900 text-white px-16 py-20 mt-14">
+    <div class="lg:grid-cols-6 grid-cols-2 grid gap-10">
+      <div class="col-span-2 lg:text-left text-center">
+        <h4 class="font-bold text-2xl mb-3">Student Center</h4>
+
+        <p class="text-gray-200">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis,
+          cum!
+        </p>
       </div>
-      <div class="col-span-6 flex justify-center flex-col">
-        <div class="font-bold lg:text-left text-center">
-          <p
-            data-aos="fade-up"
-            data-aos-duration="500"
-            class="text-3xl mb-[0.40rem]"
-          >
-            Mengapa <span class="text-[#457b9d]">Study Center</span>
-          </p>
-          <p
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            class="text-lg font-semibold mb-2"
-          >
-            Fasilitas lengkap & Pembahasan yang menyeluruh.
-          </p>
-          <p data-aos="fade-up" data-aos-duration="1500" class="text-2xl">
-            Ayo gabung sekarang!
-          </p>
-        </div>
-        <div class="flex lg:flex-row flex-col gap-10 mt-8 mb-10">
-          <div
-            class="bg-blue-100 rounded-tl-3xl rounded-br-3xl shadow-lg px-5 py-4 group hover:scale-110 duration-500"
-          >
-            <img
-              src="images/subscription/coin.png"
-              alt="Gratis"
-              class="w-28 group-hover:rotate-[25deg] group-hover:scale-125 transition-all duration-500"
-            />
-            <p
-              data-aos="fade-right"
-              data-aos-duration="250"
-              class="mb-3 font-semibold text-xl"
-            >
-              Eksplorasi Dunia Programming Tanpa Batas!
-            </p>
-            <p
-              data-aos="fade-right"
-              data-aos-duration="350"
-              class="font-medium text-[15px]"
-            >
-              Temukan keasyikan pemrograman dengan lebih dari courses gratis
-              yang siap menguji kemampuanmu. Coba lihat
-              <a href="" class="text-blue-700 underline">kursus</a>
-              atau
-              <a href="" class="text-blue-700 underline">daftar sekarang</a>
-            </p>
-          </div>
-
-          <div
-            class="bg-[#afcfe6] rounded-tl-3xl rounded-br-3xl shadow-lg px-5 py-4 group hover:scale-110 duration-500"
-          >
-            <img
-              src="images/subscription/key.png"
-              alt="Premium"
-              class="w-28 h-[6rem] group-hover:rotate-[25deg] group-hover:scale-125 transition-all duration-500"
-            />
-            <p
-              data-aos="fade-left"
-              data-aos-duration="250"
-              class="mb-3 font-semibold text-xl"
-            >
-              Telusuri Dunia Kursus Programmer Premium
-            </p>
-            <p
-              data-aos="fade-left"
-              data-aos-duration="350"
-              class="font-medium text-[15px]"
-            >
-              Jelajahi dunia coding dan temukan solusi untuk tantangan-tantangan
-              pemrograman bersama tutor ahli kami!
-              <a href="" class="text-blue-700 underline">Mulai Sekarang</a>
-            </p>
-          </div>
-        </div>
+      <div class="lg:text-left text-center">
+        <h5 class="font-bold text-xl mb-3">Guru</h5>
+        <ul>
+          <li><a href="guru.html">Home</a></li>
+        </ul>
+      </div>
+      <div class="lg:text-left text-center">
+        <h5 class="font-bold text-xl mb-3">Siswa</h5>
+        <ul>
+          <li><a href="siswa.html">Home</a></li>
+        </ul>
+      </div>
+      <div class="col-span-2 lg:text-left text-center">
+        <h5 class="font-bold text-xl mb-3">Kontak</h5>
+        <input type="text" placeholder="Masukan Email" class="border py-2 px-5 rounded-full" />
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mt-3 lg:mt-3">
+          Subscribe
+        </button>
+      </div>
+      <div class="lg:col-span-6 col-span-2">
+        <hr class="my-5 border-gray-600" />
+        <p class="text-center text-gray-200">
+          &copy Copyright Barudak Alope Junior
+        </p>
       </div>
     </div>
+  </footer>
 
-    <!-- End Mengapa Study Center -->
+  <!-- end footer -->
 
-    <!-- Manfaat Berlatih di Study Center -->
-    <h1
-      data-aos="fade-up"
-      class="text-center text-3xl font-semibold md:m-16 m-8"
-    >
-      <span class="text-[#457b9d]">MANFAAT </span>Berlatih di <br />
-      Study Center
-    </h1>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
+  <script src="./aos-master/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    window.addEventListener("scroll", function () {
+      const nav = document.querySelector("nav");
+      const guruBtn = document.getElementById("guruBtn");
+      const siswaBtn = document.getElementById("siswaBtn");
+      nav.classList.toggle("!bg-[#457b9d]", window.scrollY > 500);
+      nav.classList.toggle("!text-white", window.scrollY > 500);
+      nav.classList.toggle("!fixed", window.scrollY > 500);
+      nav.classList.toggle("md:!px-20", window.scrollY > 500);
+      nav.classList.toggle("!px-7", window.scrollY > 500);
+      nav.classList.toggle("!py-5", window.scrollY > 500);
+      guruBtn.classList.toggle("border-white", window.scrollY > 500);
+      guruBtn.classList.toggle("hover:text-teal-500", window.scrollY > 500);
+      siswaBtn.classList.toggle("border-white", window.scrollY > 500);
+      siswaBtn.classList.toggle("hover:text-teal-500", window.scrollY > 500);
+    });
 
-    <div class="grid lg:grid-cols-4 gap-50 items-center">
-      <div></div>
-      <div
-        data-aos="fade-right"
-        data-aos-offset="150"
-        data-aos-easing="ease-in-sine"
-      >
-        <img
-          src="./images/student/OBJECTS.png"
-          class="lg:w-full md:w-[400px] w-[73%] lg:mx-0 mx-auto"
-          alt=""
-        />
-      </div>
+    const showMenu = () => {
+      const aside = document.querySelector("aside");
+      aside.classList.remove("hidden");
+      aside.classList.add("flex");
+    };
+    const closeMenu = () => {
+      const aside = document.querySelector("aside");
+      aside.classList.add("hidden");
+      aside.classList.remove("flex");
+    };
+  </script>
+</body>
 
-      <div
-        class="flex lg:flex-col md:flex-row flex-col items-center justify-between numbered-list-container lg:px-5 px-12 h-90 mt-[5rem]"
-      >
-        <div class="text-center">
-          <span
-            data-aos="fade-up"
-            class="flex mx-auto mb-4 w-[45px] h-[45px] text-white bg-blue-500 items-center justify-center rounded-full font-bold"
-            ><h5>1</h5>
-          </span>
-          <h4 data-aos="fade-up" class="text-xl mb-8">Fleksibilitas waktu</h4>
-        </div>
-        <div class="text-center">
-          <span
-            data-aos="fade-up"
-            class="flex mx-auto mb-4 w-[45px] h-[45px] text-white bg-blue-600 items-center justify-center rounded-full font-bold"
-            ><h5>2</h5>
-          </span>
-          <h4 data-aos="fade-up" class="text-xl mb-8">Mudah di pahami</h4>
-        </div>
-        <div class="text-center">
-          <span
-            data-aos="fade-up"
-            class="flex mx-auto mb-4 w-[45px] h-[45px] text-white bg-blue-700 items-center justify-center rounded-full font-bold"
-            ><h5>3</h5>
-          </span>
-          <h4 data-aos="fade-up" class="text-xl mb-8">Mudah di akses</h4>
-        </div>
-        <div class="text-center">
-          <span
-            data-aos="fade-up"
-            class="flex mx-auto mb-4 w-[45px] h-[45px] text-white bg-blue-800 items-center justify-center rounded-full font-bold"
-            ><h5>4</h5>
-          </span>
-          <h4 data-aos="fade-up" class="text-xl mb-8">Prestasi kece</h4>
-        </div>
-      </div>
-    </div>
-
-    <!-- End Manfaat di Study Center -->
-
-    <!-- start footer -->
-
-    <footer class="bg-gray-900 text-white px-16 py-20 mt-14">
-      <div class="lg:grid-cols-6 grid-cols-2 grid gap-10">
-        <div class="col-span-2 lg:text-left text-center">
-          <h4 class="font-bold text-2xl mb-3">Student Center</h4>
-
-          <p class="text-gray-200">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis,
-            cum!
-          </p>
-        </div>
-        <div class="lg:text-left text-center">
-          <h5 class="font-bold text-xl mb-3">Guru</h5>
-          <ul>
-            <li>home</li>
-            <li>about</li>
-            <li>pruduct</li>
-            <li>kontak</li>
-          </ul>
-        </div>
-        <div class="lg:text-left text-center">
-          <h5 class="font-bold text-xl mb-3">Siswa</h5>
-          <ul>
-            <li>home</li>
-            <li>about</li>
-            <li>pruduct</li>
-            <li>kontak</li>
-          </ul>
-        </div>
-        <div class="col-span-2 lg:text-left text-center">
-          <h5 class="font-bold text-xl mb-3">Kontak</h5>
-          <input
-            type="text"
-            placeholder="Masukan Email"
-            class="border py-2 px-5 rounded-full"
-          />
-          <button
-            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mt-3 lg:mt-3"
-          >
-            Subscribe
-          </button>
-        </div>
-        <div class="lg:col-span-6 col-span-2">
-          <hr class="my-5 border-gray-600" />
-          <p class="text-center text-gray-200">
-            &copy Copyright Barudak Alope Junior
-          </p>
-        </div>
-      </div>
-    </footer>
-
-    <!-- end footer -->
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
-    <script src="./aos-master/dist/aos.js"></script>
-    <script>
-      AOS.init();
-      window.addEventListener("scroll", function () {
-        const nav = document.querySelector("nav");
-        const guruBtn = document.getElementById("guruBtn");
-        const siswaBtn = document.getElementById("siswaBtn");
-        nav.classList.toggle("!bg-[#457b9d]", window.scrollY > 500);
-        nav.classList.toggle("!text-white", window.scrollY > 500);
-        nav.classList.toggle("!fixed", window.scrollY > 500);
-        nav.classList.toggle("md:!px-20", window.scrollY > 500);
-        nav.classList.toggle("!px-7", window.scrollY > 500);
-        nav.classList.toggle("!py-5", window.scrollY > 500);
-        guruBtn.classList.toggle("border-white", window.scrollY > 500);
-        guruBtn.classList.toggle("hover:text-teal-500", window.scrollY > 500);
-        siswaBtn.classList.toggle("border-white", window.scrollY > 500);
-        siswaBtn.classList.toggle("hover:text-teal-500", window.scrollY > 500);
-      });
-
-      const showMenu = () => {
-        const aside = document.querySelector("aside");
-        aside.classList.remove("hidden");
-        aside.classList.add("flex");
-      };
-      const closeMenu = () => {
-        const aside = document.querySelector("aside");
-        aside.classList.add("hidden");
-        aside.classList.remove("flex");
-      };
-    </script>
-  </body>
 </html>
